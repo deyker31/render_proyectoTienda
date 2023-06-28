@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <script src="/recursos/js/verificacionlogin.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+        checkLogged();
+    });
+  </script>
+    <link rel="stylesheet" href="/recursos/css/main.css">
+    <link rel="stylesheet" href="/recursos/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geologica:wght@400&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!--CapStyle-->
+    <div id="page-home" class="cambio1">
+        <!-- mostrar la marca / logotipo / nombre de la empresa y todas las navegaciones -->
+        <header class="container cambio2">
+
+            <!-- Alerta pago cancelado paypal-->
+        <section id="alerta-pagoexitoso" class="items-center px-4 pt-5 lg:px-20 fixed z-50 left-60 invisible">
+            <div class="w-full rounded-lg bg-green-200 px-4 ">
+              <div class="flex items-center justify-between px-6 py-4 mx-auto text-green-500 font-bold">
+                <div class="flex ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="mr-4 icon icon-tabler icon-tabler-alert-triangle" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    <polyline points="11 12 12 12 12 16 13 16"></polyline>
+                  </svg>
+                  <div class="text-center">
+                  <p class="text-md font-semibold tracking-wide uppercase">Pago Realizado Exitosamente</p>
+                  <p class="text-md font-semibold tracking-wide capitalize">Gracias por su Compra!</p>
+                </div>
+                </div>
+                <button class="p-1 transition-colors duration-200 transform rounded-md hover:bg-opacity-25 hover:bg-blueGray-600 focus:outline-none"  width="24" height="24" type="button" aria-label="Close" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>                      
+                </button>
+              </div>
+            </div>
+            </section>   
+
+            <!-- marca, logo, nombre de compañía -->
+            <nav class="nav-main flex justify-between items-center dark:bg-gray-800 bg-white shadow-md">
+                <!--logo tres rallas-->
+                <section class="md:hidden menu-btn">
+                    <!--movil-->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor"
+                    class=" w-10 h-10 ml-4 md:hidden cursor-pointer p-2 hover:bg-zinc-300 dark:hover:bg-gray-500 rounded-lg text-black dark:text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                </section>
+                <div id="dropdown" class="list-none hidden fixed w-7/12 h-full top-0 left-0  bg-gray-50 dark:bg-slate-800 text-black dark:text-white">
+                    <!--movil-->
+                    <div class="menu-btn-2 mt-2">
+                        <!--Logo x-->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class=" w-10 h-10 ml-4 md:hidden cursor-pointer p-2 hover:bg-zinc-300 dark:hover:bg-gray-500 rounded-lg text-black dark:text-white">>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </div> 
+                    <!-- Submenu -->
+                    <div class="px-4 py-2 hover:bg-orange-500 border-submenu">
+                        <li class="flex items-center justify-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                              </svg>                              
+                            <a class="nav-a text-xl" href="/">INICIO</a>
+                        </li>
+                    </div>
+                    <div class="px-4 py-2 hover:bg-orange-500 ">
+                        <li class="flex items-center justify-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                              </svg>                                
+                            <a class="nav-a text-xl" href="/gorras/">GORRAS</a>
+                        </li>
+                    </div>
+                    <div class="px-4 py-2 hover:bg-orange-500 border-submenu">
+                        <li class="flex items-center justify-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                              </svg>        
+                            <a class="nav-a text-xl" href="/contact/">CONTACTO</a>
+                        </li>
+                    </div>
+                </div>
+        
+                <section class="section-1 p-2 ml-9">
+                <!-- Logo -->
+                <a href="/" ><img src="/recursos/img/logo/Logo 3.png" class="lg:w-36 lg:h-20 md:w-28 md:h-16 w-20 h-10 ml-12" alt="Logo CapStyle"></a>
+                </section>
+
+                <section class="section-2 p-2">
+                <!-- Nav: inicio,tipos de gorras, marcas, contacto -->
+                <ul class="letras hidden md:flex items-center justify-start gap-4 dark:text-white">
+                    <li><a class="nav-a active text-xl" href="/">INICIO</a></li>
+                    <li><a class="nav-a text-xl" href="/gorras/">GORRAS</a></li>
+                    <li><a class="nav-a text-xl" href="/contact/">CONTACTO</a></li>
+                </ul>
+                </section>
+                <section class="section-3 p-1 lg:p-2  lg:mr-10 md:mr-6 mr-9 flex lg:gap-4 gap-1 items-center justify-center">
+                    <div class="flex items-center justify-center mx-2">
+                  <!-- icono de cambio de color -->
+                  <button id="dark-mode-toggle" class="mx-auto hover:bg-zinc-300 dark:hover:bg-gray-500 hover:rounded-md dark:hover:rounded-md "> 
+                    <svg stroke="currentColor" id="dark" class="hidden cambio-color-2 fa-sun w-9 h-9 text-gray-400 p-2 dark:text-gray-100" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="text-white" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path></svg>
+                    <svg class="cambio-color-1 fa-moon w-9 h-9 text-gray-400 p-2 dark:text-gray-100" id="light"  xmlns="http://www.w3.org/2000/svg" width="21" height="24" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
+                </button>
+                  <!-- icono de usuario -->
+                  <ul class="ul-usuario mx-auto" id="register-button"><li ><a class="user-open svg-icon-text hover:bg-zinc-300 dark:hover:bg-gray-500 hover:rounded-md dark:hover:rounded-md" href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="38" height="38" stroke-width="1.5" stroke="currentColor" class="p-2">
+                    <path stroke-linecap="round"class="dark:text-white" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                  </svg>
+                  <img width="14" height="14" class="img-usuario-circulo top-8 ml-5 absolute hidden" src="/recursos/img/logo/icono-redondo.png" alt=""></a>
+                    <ul class="ul-usuario-1 mr-9 dark:bg-gray-800 dark:text-white">
+                      <li><a href="/register/" class="nav-a dark:hover:text-orange-500">CREAR USUARIO</a></li>
+                      <li><a href="/login/" class="nav-a dark:hover:text-orange-500">INICIAR SESIÓN</a></li> 
+                    </ul>
+                    
+                    <ul id="register-menu" class="dropdown-menu text-blue-600 dark:bg-gray-800">
+                      <li class="flex items-center justify-center pointer-events-none select-none"><p class="text-center text-sm mx-1">Perfil</p>🟢</li>
+                      <li class="text-center"><a href="#" id="logout-link" class="text-sm hover:text-orange-600 dark:hover:text-orange-500">Cerrar sesión</a></li>
+                    </ul>
+                </li></ul>
+                  <!-- icono de compra -->
+                <a href="#" class="car-span flex mx-auto hover:bg-zinc-300 dark:hover:bg-gray-500 hover:rounded-md dark:hover:rounded-md" data-modal-url="modal-fullscreen-cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  width="38" height="38" class="p-2">
+                        <path class="dark:text-white" stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                      </svg>
+                      
+                </a>
+            </div>
+                </section>
+             </nav>
+        </header>
+        <!-- Contenido real de la página -->
+        <main class="container pb-4 pt-10 bg-gray-50 dark:bg-gray-900">
+            <!-- Etiquetas section para estructurar todo el contenido en grupos lógicos.
+                Cada section tendrá un nombre de clase legible -->
+            <section class="keyvisual relative">
+                <div class="slider-screen">
+                    <img name="Imagen" src="" class="w-full h-max-sub-2 md:h-max-sub-1 lg:h-max ">
+                </div>
+                <div class="w-full h-full absolute top-0 flex flex-col items-center justify-center gap-2 text-white text-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-7xl tracking-wider">GORRAS CAPSTYLE</h1>
+                    <p class="pb-1 text-lg sm:text-xl md:text-2xl lg:text-3xl mx-4 lg:mx-0">¡Encuentra la gorra perfecta para ti!</p>
+                    <p class="pb-1text-lg sm:text-xl md:text-2xl lg:text-3xl mx-4 lg:mx-0">Añade un toque de estilo a tu atuendo con una de nuestras gorras.</p>
+                </div>
+                <div class="sliders-btn absolute flex items-center justify-between p-1 lg:p-5 w-full h-full top-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="slider-left w-9 h-9 lg:w-11 lg:h-11 hover:bg-zinc-600 icon icon-tabler icon-tabler-chevron-left" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M15 6l-6 6l6 6" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="slider-right w-9 h-9 lg:w-11 lg:h-11 hover:bg-zinc-600 icon icon-tabler icon-tabler-chevron-right" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 6l6 6l-6 6" />
+                      </svg>
+                </div>
+            </section>
+
+            <section class="teaser-products Carousel w-full m-auto pt-10 pb-12 my-5">
+                    <h2 class="text-4xl lg:text-5xl  pb-12 opacity-90 uppercause tracking-normal text-center p-auto m-auto text-orange-600 dark:text-orange-500">ÚLTIMAS NOVEDADES</h2>
+                    <div class="slick-list relative flex items-center h-auto m-auto overflow-x-hidden overflow-y-hidden" id="slick-list">
+                        <button class="slick-arrow slick-prev left-0 bg-orange-500 opacity-70 md:opacity-90 rounded-3xl  absolute shadow-md border-0 cursor-pointer text-center w-12 h-12 flex justify-center focus:outline-0 hover:bg-zinc-500 dark:hover:bg-gray-400 dark:bg-orange-500" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10 w-3 h-full text-white dark:text-black" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                        </button>
+                        <div id="track" class="slick-track relative flex justify-center  duration-700 ease-in-out gap-2" id="track">
+                            
+                        </div>
+                        <button class="slick-arrow slick-next right-0 bg-orange-500 opacity-70 md:opacity-90 rounded-3xl  absolute shadow-md border-0 cursor-pointer text-center w-12 h-12 flex justify-center focus:outline-0 hover:bg-zinc-500 dark:hover:bg-gray-400 dark:bg-orange-500" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10 w-3 h-full text-white dark:text-black" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                        </button>
+                    </div>       
+            </section>
+
+            <h3 class="text-4xl lg:text-5xl  text-orange-600 dark:text-orange-500 ml-6 lg:ml-12">GORRAS DE CALIDAD</h3>
+
+            <section class="flex items-center justify-center gap-4 md:gap-5 lg:gap-6 w-11/12 mx-auto my-10">
+                
+                
+                <div class=" w-full relative bg-white border border-gray-200 dark:border-gray-700  shadow-inner">
+                    <a href="#">
+                        <img class="rounded-t-lg w-full h-full" src="/recursos/img/background/10.jpg" alt="" />
+                    </a>
+                    <div class="p-3 md:p-5 absolute top-0 ">
+                        <a href="#">
+                            <h5 class="my-auto md:mb-2 text-lg sm:text-2xl md:text-3xl lg:text-4xl tracking-tighter text-white dark:text-white uppercase text-center">Lleva tu estilo a otro nivel con nuestras gorras de alta calidad</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full relative bg-white border border-gray-200 dark:border-gray-700  shadow-inner">
+                    <a href="#">
+                        <img class="rounded-t-lg w-full h-full" src="recursos/img/background/8.jpg" alt=""/>
+                    </a>
+                    <div class="p-3 md:p-5 absolute top-0 flex">
+                        <a href="#">
+                            <h5 class=" mb-0 md:mb-1 lg:mb-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tighter text-white dark:text-white uppercase text-center">Ponte en modo ganador con nuestras gorras</h5>
+                        </a>
+                    </div>
+                </div>
+
+
+                    
+            </section>
+
+            <h3 class="text-4xl lg:text-5xl text-orange-600 dark:text-orange-500 text-end mr-12 my-10">¿CONOCES LAS PARTES DE UNA GORRA?</h3>
+            <section class="partes-gorras mb-6">
+                <p class="p-2 m-2 text-lg text-gray-900 dark:text-white font-normal mx-6">En esta imagen encontrarás las partes de una gorra, hay que aclarar que, según el tipo, estas pueden variar y requerir o no ciertos materiales de refuerzo. 
+                    También cambiará de acuerdo con el diseño de la visera que usará. 
+                    Las gorras deportivas suelen requerir materiales más livianos, que permitirán un mayor flujo de aire, mientras que las gorras de estilo urbano tienden a ser más rígidas y un poco más pesadas.</p>
+                <img class="py-2 w-11/12 h-full mx-auto" src="recursos/img/background/partes-gorras.jpg" alt="Partes de la gorra">
+            </section>
+
+            <section id="membresia" class="mt-10">
+                <div class="flex flex-col text-center text-white bg-black dark:bg-gray-800 shadow max-h-96 mx-auto m-5 p-4 w-11/12 rounded-full">
+                    <h4 class=" text-4xl text-orange-500 ">SUSCRIBETE</h4>
+                    <P class="text-xl">Registrate Gratis. Unete A La Comunidad</P>
+                    <div class="btn-membresia">
+                        <a href="/register"><button class="bg-white dark:bg-gray-200 rounded-lg p-2 text-black m-2 hover:bg-orange-500 dark:hover:bg-orange-600">Únete a Nosotros</button></a>
+                        <a href="/login"><button class="bg-white dark:bg-gray-200  rounded-lg p-2 text-black m-2 hover:bg-orange-500 dark:hover:bg-orange-600">Inicia Sesion</button></a>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+        <!-- Información de marca y legal -->
+        <footer class="container flex flex-col ">
+            
+            <!-- Marca / Compañía -->
+            <section class="brand bg-black grid md:grid-cols-3 py-3 ">
+                <div class="my-auto">
+                <figure><img src="/recursos/img/logo/Logo 3.png" alt="Logo CapStyle" class="w-40 h-20 md:w-72 md:h-40 mx-auto"></figure>
+                <p class="text-gray-50 text-center font-semibold my-2 sm:my-0">Las gorras más economicas de Colombia</p>
+                </div>
+                    <div class="text-center flex flex-col items-center justify-center">
+                    <span class="text-white font-sans font-bold">SÍGANOS EN NUESTRAS REDES<span><br>
+                        <div class="flex flex-row md:flex-col justify-center my-3 md:my-1">
+                        <img class="sm:p-1 mx-1 sm:mx-auto hover:rounded-md w-8 h-8 md:w-10 md:h-10 hover:bg-gray-800" src="/recursos/img/redes/whatsapp.png" alt="Logo Whatsapp">
+                        <img class="sm:p-1 mx-1 sm:mx-auto hover:rounded-md  w-8 h-8 md:w-10 md:h-10 hover:bg-gray-800" src="/recursos/img/redes/facebook.png" alt="Logo Facebook">
+                        <img class="sm:p-1 mx-1 sm:mx-auto hover:rounded-md  w-8 h-8 md:w-10 md:h-10 hover:bg-gray-800" src="/recursos/img/redes/instagram.png" alt="Logo Instagram">
+                        </div>
+                    </div>
+                <address class="text-center">
+                    <span class="text-orange-500 font-sans font-bold">CONTÁCTANOS<span><br>
+                    <div class="text-white info-footer font-serif font-light tracking-normal my-2 sm:my-0">   
+                    <p>Cambios Sin Fronteras<br>
+                    Calle 12<br>
+                    Ciudad Bogotá <br>
+                    </p> 
+                    <p class="text-orange-400 my-1">Teléfono:</p><a href="tel:+1234567890">+57 320 6528657</a>
+                    <p class="text-orange-400 my-1">E-Mail:</p> <a href="mailto:deyner.r76@gmail.com" >deyner.r76@gmail.com</a>
+                    </div>     
+                </address>
+            </section>
+
+            <!-- Legal -->
+            <section class="legal">
+                <div>
+                    <ul class="ul-info flex items-center justify-center bg-black">
+                        <li class="font-semibold text-zinc-50 mr-2 text-md sm:text-lg">Copyright Cambios Sin Fronteras - 2018.</li>
+                        <li class="font-semibold text-zinc-50 text-sm sm:text-lg">TODOS LOS DERECHOS RESERVADOS.</li>
+                    </ul>
+                </div>
+            </section>
+           
+        </footer>
+
+    </div>
+    
+    <script src="/app.js"></script>
+   <script src="/recursos/js/slide.js"></script>
+   <script src="/recursos/js/index2.js"></script>
+   <script src="/recursos/js/cambio-color.js"></script>
+   <script src="/recursos/js/menu-desplegable.js"></script>
+   <script src="/recursos/js/home.js"></script>
+    
+</body>
+</html>

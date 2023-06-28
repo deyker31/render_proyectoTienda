@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapStyle Admin</title>
+    <link rel="stylesheet" href="/recursos/css/styles.css">
+    <link rel="stylesheet" href="/recursos/css/main.css">
+</head>
+
+<body class="min-h-100 bg-gray-200">
+    <div class="md:flex flex-col min-h-screen md:align-top">
+        <aside class=" w-full bg-blue-600 px-5 py-10 text-center">
+            <a href="/"><img src="/recursos/img/logo/logo-admin.svg" alt="Logo cerrar sesion" class="hover:bg-blue-500 p-2"></a>
+            <div class="flex items-center justify-center my-auto">
+                <h1 class="text-white tracking-wide text-4xl text-center font-bold mt-2">CapStyle</h1>
+                <img src="/recursos/img/logo/Logo 3.png" alt="Logo CapStyle" width="70" height="40">
+            </div>
+            <p class="mt-10 text-black font-bold text-xl">Administra tus Productos</p>
+            <nav class="mt-8">
+                <a href="/"
+                    class="px-3 py-1 text-white block text-2xl hover:bg-orange-500 bg-red-500 rounded">Productos</a>
+                <a href="nuevo-producto.html"
+                    class="px-3 py-1 text-white block text-2xl hover:bg-orange-500 mt-2 rounded">Nuevo Productos</a>
+            </nav>
+        </aside> <!--sidebar-->
+        <main class="w-full px-5 py-10 bg-gray-200">
+
+
+
+
+            <h2 class="text-3xl font-bold text-center">Productos</h2>
+
+            <div class="flex flex-col mt-10">
+                <div class="py-2 overflow-x-auto">
+                    <div
+                        class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+                        <table class="min-w-full">
+                            <thead class="bg-gray-100 ">
+                                <tr>
+                                    <th
+                                        class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-orange-600 uppercase tracking-wider">
+                                        Nombre Del Producto
+                                    </th>
+                                    <th
+                                        class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-orange-600 uppercase tracking-wider">
+                                        Precio
+                                    </th>
+                                    <th
+                                        class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-orange-600 uppercase tracking-wider">
+                                        Marca - Tipo
+                                    </th>
+                                    <th
+                                        class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-orange-600 uppercase tracking-wider">
+                                        Acciones
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="listado-Productos" class="bg-white"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/app.js" type="module"></script>
+    <script src="js/api.js"></script>
+</body>
+
+</html>

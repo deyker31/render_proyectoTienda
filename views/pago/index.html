@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/recursos/css/main.css">
+    <link rel="stylesheet" href="/recursos/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geologica:wght@400&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Pago</title>
+</head>
+<body>
+    
+    <header class="container w-full relative">
+      <!-- Alerta pago cancelado paypal-->
+        <section id="alert-cancel" class="items-center px-5 py-12 lg:px-20 fixed z-50 left-72 invisible">
+            <div class="w-full rounded-lg bg-red-200 px-4 ">
+              <div class="flex items-center justify-between px-6 py-4 mx-auto text-red-500 font-bold">
+                <div class="flex ">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="mr-4 icon icon-tabler icon-tabler-alert-triangle" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    <polyline points="11 12 12 12 12 16 13 16"></polyline>
+                  </svg>
+                  <p class="text-md font-semibold tracking-wide uppercase">Pago Cancelado</p>
+                </div>
+                <button class="p-1 transition-colors duration-200 transform rounded-md hover:bg-opacity-25 hover:bg-blueGray-600 focus:outline-none" type="button" aria-label="Close" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M10 10l4 4m0 -4l-4 4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            </section>   
+
+
+        <nav class="bg-white dark:bg-gray-800">
+            <section class="flex items-center justify-between ">
+            <a class="ml-10" href="/"><img src="/recursos/img/logo/Logo 3.png" width="390" height="280" alt="Logo CapStyle"></a>
+            <div class="flex flex-col items-center mr-8">
+                <a href="/gorras/">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9 mb-4 hover:bg-zinc-100 dark:hover:bg-gray-600 p-2 rounded-md">
+                    <path class="text-orange-600" stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+                </svg> </a> 
+                <div class="flex mr-10 text-black dark:text-white">
+                <img src="/recursos/img/logo/cerrar-llave.png" class="w-8 h-8 mx-2" alt="Logo candado cerrado">
+                <p class="">COMPRA SEGURA <br>100% PROTEGIDO</p>
+                </div>                
+            </div>
+            </section>
+        </nav>
+    </header>
+
+    <main class="grid grid-cols-2 container">
+
+            <section class="bg-orange-200 dark:bg-gray-600 py-4">
+                <h2 class="text-3xl font-bold text-center dark:text-gray-100">Método de Pago</h2>
+                <form class="max-w-md mx-auto" >
+
+                   <div class="flex items-center justify-center my-3">
+                      <button id="paypal-button" class="dark:bg-yellow-300 dark:hover:bg-yellow-400 bg-yellow-400 hover:bg-yellow-500 py-1 px-14 rounded-lg">
+                        <img class="w-18 h-10" src="/recursos/img/logo/logo-paypal.svg" alt="Logo Paypal">
+                      </button>
+                   </div>
+                   
+                   <div class="flex items-center justify-center my-3">
+                    <button id="nequi-button" class="dark:bg-blue-300 dark:hover:bg-blue-400 bg-blue-400 hover:bg-blue-500 py-1 px-14 rounded-lg">
+                      <img class="w-18 h-10" src="/recursos/img/logo/logo-nequi.svg" alt="Logo Nequi">
+                    </button>
+                 </div>
+
+                 <div class="flex items-center justify-center my-3">
+                  <button id="bancolombia-button" class="dark:bg-amber-300 dark:hover:bg-amber-400 bg-amber-400 hover:bg-amber-500  py-1 px-14 rounded-lg">
+                    <img class="w-18 h-10" src="/recursos/img/logo/logo-bancolombia.svg" alt="Logo Bancolombia">
+                  </button>
+               </div>
+
+                  </form>
+                </section>
+            <section class="bg-orange-300 py-2 dark:bg-gray-700">
+                <h2 class="text-3xl font-bold text-center dark:text-gray-100">Productos</h2>
+                <table class="mx-auto text-center my-2">
+                    <thead class="text-xl text-orange-600 dark:text-orange-500 ">
+                        <tr>
+                        <th class="px-2">Imagen</th>
+                        <th>Nombre</th>
+                        <th class="px-5">Precio</th>
+                        <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody  id="contenedor-pago-productos" class="mx-auto"></tbody>
+                </table>
+                <p class="text-center text-xl font-sans dark:text-white">Total: <span class="total-pago font-bold"></span></p>
+            </section>
+
+    </main>
+    
+
+    <footer class="container flex flex-col" id="footer">
+            
+        <!-- Marca / Compañía -->
+        <section class="brand bg-black grid grid-cols-3 py-3">
+            <div class="my-auto">
+            <figure><img src="/recursos/img/logo/Logo 3.png" alt="Logo CapStyle" width="300" height="30"></figure>
+            <p class="text-gray-50 text-center font-semibold">Las gorras más economicas de Colombia</p>
+            </div>
+                <div class="text-center my-auto">
+                <span class="text-white font-sans font-bold">SÍGANOS EN NUESTRAS REDES<span><br>
+                    <img class="p-2 mx-auto hover:bg-gray-800" src="/recursos/img/redes/whatsapp.png" alt="Logo Whatsapp">
+                    <img class="p-2 mx-auto hover:bg-gray-800" src="/recursos/img/redes/facebook.png" alt="Logo Facebook">
+                    <img class="p-2 mx-auto hover:bg-gray-800" src="/recursos/img/redes/instagram.png" alt="Logo Instagram">
+                </div>
+            <address class="text-center">
+                <span class="text-orange-500 font-sans font-bold">CONTÁCTANOS<span><br>
+                <div class="text-white info-footer font-serif font-light tracking-normal">   
+                <p>Cambios Sin Fronteras<br>
+                Calle 12<br>
+                Ciudad Bogotá <br>
+                </p> 
+                <p class="text-orange-400">Teléfono:</p><a href="tel:+1234567890">+57 320 6528657</a>
+                <p class="text-orange-400">E-Mail:</p> <a href="mailto:deyner.r76@gmail.com" >deyner.r76@gmail.com</a>
+                </div>     
+            </address>
+        </section>
+
+        <!-- Legal -->
+        <section class="legal">
+            <div>
+                <ul class="ul-info flex items-center justify-center bg-black">
+                    <li class="font-semibold text-zinc-50 mr-2">Copyright Cambios Sin Fronteras - 2018.</li>
+                    <li class="font-semibold text-zinc-50">TODOS LOS DERECHOS RESERVADOS.</li>
+                </ul>
+            </div>
+        </section>
+       
+    </footer>
+
+    <script src="pago.js"></script>
+    <script src="colorDarkMode.js"></script>
+
+</body>
+</html>

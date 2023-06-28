@@ -1,0 +1,354 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+/*Hacer que mi pagina se adapte totalemnte al body*/
+header, main , footer{
+    min-width: 100%;
+}
+body > div{
+    overflow-x: hidden;
+}
+
+/*efecto overlay del menu hamburguesa*/
+#dropdown{
+    transition: transform 1s ease;
+}
+@media (max-width: 767px) {
+    .cambio-1 > section:not(.section-1) {
+      filter: blur(3px) brightness(50%); 
+      pointer-events: none;
+    }
+}
+@media (max-width: 767px) {
+    .cambio-2 > section:not(.section-1),.cambio-2 > h3 {
+      filter: blur(3px) brightness(50%); 
+      pointer-events: none;
+    }
+}
+.border-submenu{
+    border-top: 1px solid rgb(205, 203, 203);
+    border-bottom: 1px solid rgb(205, 203, 203);
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+/*a + carrito scroll*/
+
+.carrito-scroll{
+    max-height: 400px; 
+    overflow-y: auto; 
+} 
+@media (max-width: 767px) {
+    .carrito-scroll{
+    
+        max-height: 200px; 
+        overflow-y: auto;
+        /*overflow-x: hidden; */
+        height: 280px;
+    }
+}
+
+a{
+    font-family: "Montserrat",Sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+/*nav*/
+
+.section-2{
+    margin-right: 4rem;
+}
+
+/*Linea de nav + active*/
+
+.active{
+    padding: 10px;
+    border-top: 2px solid orangered;
+    border-bottom: 2px solid  orangered;
+}
+.letras li .nav-a:hover{
+    color: orangered;
+    transition: 150ms;
+}
+
+.ul-info{
+    padding: 10px;
+    border-top: 2px solid white;
+}
+
+
+#buscador{
+    border-bottom: 1px solid #000000;
+    
+}
+#buscador:focus{
+    box-shadow: 0 0 5px gainsboro; 
+}
+/* Nav fijo */
+
+header{
+    z-index: 10;
+    position: fixed;
+    background-color: white;
+}
+
+/*nav desplegable*/
+
+.ul-usuario a{
+    
+    padding: 20px auto;
+    display: block;
+}
+
+.ul-usuario li ul{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 18px;
+    display: none;
+    position: absolute;
+    font-size: 11px;
+    right: 12px;
+    border: 1px solid black;
+}
+.ul-usuario-1 li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2px;
+}
+.ul-usuario-1 li a{
+    font-family: 'Geologica', sans-serif;
+}
+.ul-usuario-1 li a:hover{
+    text-decoration: underline;
+    transition: 300ms ease;
+}
+
+.ul-usuario li:hover > ul{
+    display: block;
+}
+.ul-usuario > li{
+    float: none;
+}
+/*Nav desplegable carrito*/
+
+
+.ul-carrito a{
+    padding: 20px auto;
+    display: block;
+}
+
+.ul-carrito li ul {
+    display: none;
+    right: 20px;
+    position: absolute;
+    background-color: white;
+    padding: 1px 5px auto 5px;
+    /*
+    min-height: 400px;
+    min-width: 300px;*/
+    
+    
+}
+@media (min-width: 768px) {
+    .ul-carrito li ul{
+        min-height: 400px;
+        min-width: 300px;
+    }
+}
+@media (max-width: 767px) {
+    .ul-carrito li ul{
+        min-height: 300px;
+        min-width: 300px;
+    }
+}
+
+
+.ul-carrito li ul{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#lista-carrito thead tr > th{
+    padding: 12px 16px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.vacio {
+    padding: 4px;
+    width: 50%;
+    background-color: orange;
+    font-family: "Montserrat",Sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    margin: auto;
+}
+#realizar-compra{
+    background-color: deepskyblue;
+    padding: 3px;
+    margin: 5px auto;
+    width: 70%;
+}
+
+.vacio:hover{
+    background-color: rgb(233, 153, 4);
+}
+#realizar-compra:hover{
+    background-color:rgb(6, 166, 219);
+}
+
+.ul-carrito li:hover > ul{
+    display: block;
+}
+
+
+/*Imagen fondos*/
+
+.img-fondo{
+    height: 800px;
+    width: 100%;
+}
+
+
+/*texto del medio de slider*/
+
+h1, h2, h3 ,h4 {
+    font-family: 'Bebas Neue', sans-serif; 
+}
+
+h5{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+}
+.slider-text p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; 
+}
+
+/* images home slider*/
+
+.slick-list{
+    max-width: 90vw;
+}
+
+
+.ptext-2{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+/*
+.btn-carrito{
+    font-size: 0.8rem;
+    line-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+} */
+.btn-carrito{
+    font-family: 'Montserrat', sans-serif;
+}
+.btn-carrito:hover{
+    background-color: darkblue;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* buttons home slider*/
+
+.slick-arrow{
+    z-index: 4;
+}
+
+/*register y login*/
+
+.sesion-r-l{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 100;
+}
+/*quitar palomita de checked*/
+input[type=checkbox]:checked {
+    appearance: none;
+    -webkit-appearance: none; /* Para Chrome */
+}
+
+/* btn eliminar curso */
+
+.borrar-curso{
+    font-weight: bold;
+    color: black;
+    padding: 1px;
+    background-color: red;
+    border: 1px solid black;
+    text-align: center;
+    margin-right: 4px;
+}
+.borrar-curso:hover{
+    background-color: rgb(218, 4, 4);
+}
+
+/* btn sumar curso */
+.sumar-curso{
+    font-weight: bold;
+    color: black;
+    background-color: rgb(4, 150, 4);
+    padding: 1px 8px;
+    border: 1px solid black;
+    text-align: center;
+    margin-right: 10px;
+}
+.sumar-curso:hover{
+    background-color: green;
+}
+
+/* */
+#register-button {
+    display: none;
+  }
+  
+  .dropdown-toggle {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown-menu li {
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  .dropdown-toggle:hover + .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu:hover {
+    display: block;
+  }
+/* border de form pago */
+.valid {
+    border-color: green;
+    }
+    
+.invalid {
+    border-color: red;
+}

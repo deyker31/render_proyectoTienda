@@ -1,0 +1,582 @@
+{
+  "gorras": [
+    {
+      "id": 1,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/1.png"
+    },
+    {
+      "id": 2,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "celeste",
+      "imagen": "/recursos/img/products/2.png"
+    },
+    {
+      "id": 3,
+      "nombre": "Gorra moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "negro",
+      "imagen": "/recursos/img/products/3.png"
+    },
+    {
+      "id": 4,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/4.png"
+    },
+    {
+      "id": 5,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "gris",
+      "imagen": "/recursos/img/products/5.png"
+    },
+    {
+      "id": 6,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "negro",
+      "imagen": "/recursos/img/products/6.png"
+    },
+    {
+      "id": 7,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "rojo",
+      "imagen": "/recursos/img/products/7.png"
+    },
+    {
+      "id": 8,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "marron",
+      "imagen": "/recursos/img/products/8.png"
+    },
+    {
+      "id": 9,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "negro",
+      "imagen": "/recursos/img/products/9.png"
+    },
+    {
+      "id": 10,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "marron",
+      "imagen": "/recursos/img/products/10.png"
+    },
+    {
+      "id": 11,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "gris",
+      "imagen": "/recursos/img/products/11.png"
+    },
+    {
+      "id": 12,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "negro",
+      "imagen": "/recursos/img/products/12.png"
+    },
+    {
+      "id": 13,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/13.png"
+    },
+    {
+      "id": 14,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "negro",
+      "imagen": "/recursos/img/products/14.png"
+    },
+    {
+      "id": 15,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "negro",
+      "imagen": "/recursos/img/products/15.png"
+    },
+    {
+      "id": 16,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/16.png"
+    },
+    {
+      "id": 17,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "negro",
+      "imagen": "/recursos/img/products/17.png"
+    },
+    {
+      "id": 18,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "blanco",
+      "imagen": "/recursos/img/products/18.png"
+    },
+    {
+      "id": 19,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/19.png"
+    },
+    {
+      "id": 20,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "negro",
+      "imagen": "/recursos/img/products/20.png"
+    },
+    {
+      "id": 21,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "rojo",
+      "imagen": "/recursos/img/products/21.png"
+    },
+    {
+      "id": 22,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "gris",
+      "imagen": "/recursos/img/products/22.png"
+    },
+    {
+      "id": 23,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "blanco",
+      "imagen": "/recursos/img/products/23.png"
+    },
+    {
+      "id": 24,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "azul",
+      "imagen": "/recursos/img/products/24.png"
+    },
+    {
+      "id": 25,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/25.png"
+    },
+    {
+      "id": 26,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "negro",
+      "imagen": "/recursos/img/products/26.png"
+    },
+    {
+      "id": 27,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "negro",
+      "imagen": "/recursos/img/products/27.png"
+    },
+    {
+      "id": 28,
+      "nombre": "Gorra clásica",
+      "precio": 23.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/28.png"
+    },
+    {
+      "id": 29,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "ul",
+      "imagen": "/recursos/img/products/29.png"
+    },
+    {
+      "id": 30,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "celeste",
+      "imagen": "/recursos/img/products/30.png"
+    },
+    {
+      "id": 31,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/31.png"
+    },
+    {
+      "id": 32,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "negro",
+      "imagen": "/recursos/img/products/32.png"
+    },
+    {
+      "id": 33,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "negro",
+      "imagen": "/recursos/img/products/33.png"
+    },
+    {
+      "id": 34,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/34.png"
+    },
+    {
+      "id": 35,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "marron",
+      "imagen": "/recursos/img/products/35.png"
+    },
+    {
+      "id": 36,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "negro",
+      "imagen": "/recursos/img/products/36.png"
+    },
+    {
+      "id": 37,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/37.png"
+    },
+    {
+      "id": 38,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "blanco",
+      "imagen": "/recursos/img/products/38.png"
+    },
+    {
+      "id": 39,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "gris",
+      "imagen": "/recursos/img/products/39.png"
+    },
+    {
+      "id": 40,
+      "nombre": "Gorra clásica",
+      "precio": 25.35,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/40.png"
+    },
+    {
+      "id": 41,
+      "nombre": "Gorra deportiva",
+      "precio": 10.12,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "gris",
+      "imagen": "/recursos/img/products/41.png"
+    },
+    {
+      "id": 42,
+      "nombre": "Gorra de moda",
+      "precio": 32.01,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "blanco",
+      "imagen": "/recursos/img/products/42.png"
+    },
+    {
+      "id": 43,
+      "nombre": "Gorra clásica",
+      "precio": 19.99,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/43.png"
+    },
+    {
+      "id": 44,
+      "nombre": "G deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "azul",
+      "imagen": "/recursos/img/products/44.png"
+    },
+    {
+      "id": 45,
+      "nombre": "Gorra de moda",
+      "precio": 29.99,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "gris",
+      "imagen": "/recursos/img/products/45.png"
+    },
+    {
+      "id": 46,
+      "nombre": "Gorra clásica",
+      "precio": 15.59,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/46.png"
+    },
+    {
+      "id": 47,
+      "nombre": "Gorra deportiva",
+      "precio": 24.99,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "rojo",
+      "imagen": "/recursos/img/products/47.png"
+    },
+    {
+      "id": 48,
+      "nombre": "Gorra de moda",
+      "precio": 28.92,
+      "tipo": "Dad Hat",
+      "marca": "Puma",
+      "color": "verde",
+      "imagen": "/recursos/img/products/48.png"
+    },
+    {
+      "id": 49,
+      "nombre": "Gorra clásica",
+      "precio": 17.92,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "azul",
+      "imagen": "/recursos/img/products/49.png"
+    },
+    {
+      "id": 50,
+      "nombre": "Gorra deportiva",
+      "precio": 18.33,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "negro",
+      "imagen": "/recursos/img/products/50.png"
+    },
+    {
+      "id": 51,
+      "nombre": "Gorra deportiva",
+      "precio": 22.99,
+      "tipo": "Snapback",
+      "marca": "Nike",
+      "color": "negro",
+      "imagen": "/recursos/img/products/51.png"
+    },
+    {
+      "id": 52,
+      "nombre": "Gorra Deportiva Curved",
+      "precio": 21.19,
+      "tipo": "Curved",
+      "marca": "Vans",
+      "color": "verde",
+      "imagen": "/recursos/img/products/52.png"
+    },
+    {
+      "id": 53,
+      "nombre": "Gorra Las Vegas",
+      "precio": 27.72,
+      "tipo": "Curved",
+      "marca": "Raiders",
+      "color": "negro",
+      "imagen": "/recursos/img/products/53.png"
+    },
+    {
+      "id": 54,
+      "nombre": "Gorra Visera de Bandera",
+      "precio": 14.13,
+      "tipo": "Visor",
+      "marca": "Tommy Jeans",
+      "color": "blanco",
+      "imagen": "/recursos/img/products/54.png"
+    },
+    {
+      "id": 55,
+      "nombre": "Gorra Logo Visor",
+      "precio": 23.38,
+      "tipo": "Trucker",
+      "marca": "Calvin Klein",
+      "color": "gris",
+      "imagen": "/recursos/img/products/55.png"
+    },
+    {
+      "id": 56,
+      "nombre": "Gorra clasica",
+      "precio": 21.88,
+      "tipo": "Trucker",
+      "marca": "The North Face",
+      "color": "gris",
+      "imagen": "/recursos/img/products/56.png"
+    },
+    {
+      "id": 57,
+      "nombre": "Gorra de Visor",
+      "precio": 19.24,
+      "tipo": "Visor",
+      "marca": "Us Open",
+      "color": "verde",
+      "imagen": "/recursos/img/products/57.png"
+    },
+    {
+      "id": 58,
+      "nombre": "Gorra clasica",
+      "precio": 26.64,
+      "tipo": "Trucker",
+      "marca": "Gucci",
+      "color": "negro",
+      "imagen": "/recursos/img/products/58.png"
+    },
+    {
+      "id": 59,
+      "nombre": "Gorra de Visor",
+      "precio": 22.24,
+      "tipo": "Snapback",
+      "marca": "Adidas",
+      "color": "negro",
+      "imagen": "/recursos/img/products/59.png"
+    },
+    {
+      "id": 60,
+      "nombre": "Gorra deportiva",
+      "precio": 27.29,
+      "tipo": "Trucker",
+      "marca": "Nike",
+      "color": "blanco",
+      "imagen": "/recursos/img/products/60.png"
+    },
+    {
+      "nombre": "Gorra clasica",
+      "precio": "100",
+      "marca": "Adidas",
+      "tipo": "Nike",
+      "color": "blanco",
+      "imagen": "/recursos/img/products/nuevo.png",
+      "id": 61
+    },
+    {
+      "nombre": "Gorra clasica",
+      "precio": "100",
+      "marca": "Adidas",
+      "tipo": "Nike",
+      "color": "blanco",
+      "imagen": "/recursos/img/products/nuevo.png",
+      "id": 62
+    }
+  ],
+  "users": [
+    {
+      "name": "Deyker",
+      "email": "deyker31@gmail.com",
+      "password": "Deyker31.",
+      "id": 1
+    },
+    {
+      "name": "Admin",
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "id": 2
+    }
+  ],
+  "registros": [
+    {
+      "precio": "44.98",
+      "id": 1
+    }
+  ]
+}
