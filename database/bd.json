@@ -542,7 +542,7 @@
     },
     {
       "nombre": "Gorra clasica",
-      "precio": "100",
+      "precio": 100,
       "marca": "Adidas",
       "tipo": "Nike",
       "color": "blanco",
@@ -551,7 +551,7 @@
     },
     {
       "nombre": "Gorra clasica",
-      "precio": "100",
+      "precio": 100,
       "marca": "Adidas",
       "tipo": "Nike",
       "color": "blanco",

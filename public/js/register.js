@@ -64,63 +64,56 @@ passwordInput.addEventListener('input', e=> {
     
 })
 
-
 //Formulario y envio de correo a base de datos
 formulario.addEventListener('submit',e =>{
     e.preventDefault();
+    
     const newUser = {
         name: nameInput.value,
         email: emailInput.value,
         password: passwordInput.value
-
     }
 
-const url = 'http://localhost:3000/users';
 
-
- const nuevoProducto = async (producto) => {
-
-    try {
-        await fetch(url, {
-            method: 'POST',
-            body: JSON.stringify(producto),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-    } catch (error) {
-        console.log(error);
-    }
-
-}
-
-// Verificar si el correo electrónico ya existe
- fetch(url)
-  .then(response => response.json())
-  .then(data => {
-     const exists = data.some(user => user.email === newUser.email);
-     if(nameInput.value === '' && emailInput.value === '' && passwordInput.value === ''){
-        //para ver si hay algun campo vacio
-        mostrarAlerta('Campos Vacios');
-     }
-     else if (exists) {
-        //si ya existe la cuenta
-        mostrarAlerta('Esta cuenta ya existe');
+if(nameInput.value === '' && emailInput.value === '' && passwordInput.value === ''){
+    //para ver si hay algun campo vacio
+    mostrarAlerta('Campos Vacios');
+ }else{
+    
+    // Envía los datos al servidor
+    fetch('http://localhost:3001/api/users', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newUser),
+    })
+    .then(response => response.json())
+    .then(data => {
+        // manejar la respuesta exitosa
+        console.log('Success:', data);
+         //para crear la cuenta
+         alert('Cuenta creada exitosamente✅');
+         //resetear la web
+         window.location.href = '/register';
+    })
+    .catch((error) => {
+        // manejar el error
+        console.error('Error:', error);
+       //Ya existe la cuenta
+       mostrarAlerta('Esta cuenta ya existe');
         nameInput.value = '';
         nameInput.classList.remove('outline-green-700', 'outline-4', 'outline');
         emailInput.value = '';
         emailInput.classList.remove('outline-green-700', 'outline-4', 'outline');
         passwordInput.value = '';
         passwordInput.classList.remove('outline-green-700', 'outline-4', 'outline');
-    } else {
-        //para crear la cuenta
-        alert('Cuenta creada exitosamente✅');
-        nuevoProducto(newUser);
-        window.location.href = '/register';
-    }
-});
+    });
+
+}
 
     //quedamos AQUIIIII
+         
 })
 
 //mensaje de campos vacios
@@ -171,6 +164,3 @@ const validar = (input,val, extra) => {
 } 
 
 })();
-
-
-
