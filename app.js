@@ -55,6 +55,7 @@ app.post('/api/users', async (req, res) => {
     res.status(500).send(error);
   }
 }); 
+render(app)
 
 ////Verficar Sesion /////
 
