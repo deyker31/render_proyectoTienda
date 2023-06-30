@@ -11,7 +11,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 (async()=>{
     try {
-        await mongoose.connect(process.env.MONGO_URI_TEST,{ useNewUrlParser: true, useUnifiedTopology: true });
+        await mongoose.connect("mongodb://tienda31:123@ac-tsqd4w3-shard-00-00.zkqhiee.mongodb.net:27017,ac-tsqd4w3-shard-00-01.zkqhiee.mongodb.net:27017,ac-tsqd4w3-shard-00-02.zkqhiee.mongodb.net:27017/?ssl=true&replicaSet=atlas-t5ypoa-shard-0&authSource=admin&retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true });
         console.log('Te has conectado a mongoDB');
     } catch (error) {
         console.log(error);
