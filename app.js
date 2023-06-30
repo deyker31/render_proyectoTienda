@@ -11,7 +11,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 (async()=>{
     try {
-        await mongoose.connect(process.env.MONGO_URI_TEST);
+        await mongoose.connect(process.env.MONGO_URI_TEST,{ useNewUrlParser: true, useUnifiedTopology: true });
         console.log('Te has conectado a mongoDB');
     } catch (error) {
         console.log(error);
