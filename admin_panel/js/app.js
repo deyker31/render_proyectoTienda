@@ -47,7 +47,15 @@ async function confirmarEliminar(e){
         if(confirmar){
             await eliminarProducto(productoId);
             alert('Producto eliminado exitosamente ✅');
-            window.location.replace('https://capstyle.onrender.com/admin_productos/');
+            function navigate() {
+                try {
+                  window.location.href = 'https://capstyle.onrender.com/admin_productos/'; 
+                } catch (error) {
+                  window.location.href = 'https://capstyle.onrender.com/admin_productos/';  
+                }
+              }
+              
+              navigate();
         }
     }
 }

@@ -3,8 +3,8 @@ import { nuevoProducto } from "./api.js";
 (function (){
 //Selectores 
 const formulario = document.querySelector('#formulario');
-const boton = document.querySelector('.btn-submit')
-boton.addEventListener('click', validarProducto);
+
+formulario.addEventListener('click', validarProducto);
 
 async function validarProducto(e) {
     e.preventDefault();
