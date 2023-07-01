@@ -33,7 +33,7 @@ async function validarProducto(e) {
 
     await nuevoProducto(producto);
     alert('Producto agregado exitosamente ✅');
-    //window.location.href = '/admin_productos'
+    window.location.href = '/admin_productos/nuevoproducto'
 }
 
 function validar(producto) {

@@ -103,6 +103,7 @@ app.use(express.static('public'));//ruta donde estan el css, el js y img
 app.use('/recursos',express.static(__dirname+'/public'));//carpeta de public , y todos los archivos lo llamaremos desde aqui
 app.use(express.static('database'));//temporal
 app.use('/admin_productos',express.static(path.resolve('admin_panel')));//pantalla de productos
+app.use('/admin_productos/nuevoproducto', express.static(path.resolve('admin_panel/nuevo-producto.html')));//pantalla de productos
 app.use('/pago/alerta',express.static(path.resolve('src', 'pagoCancelado')));// conexion de pagoalerta
 app.use('/alerta',express.static(path.resolve('views', 'pagoExitoso')));// conexion de pagoalerta
 
