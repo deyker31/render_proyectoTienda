@@ -33,7 +33,7 @@ async function validarProducto(e) {
 
     await nuevoProducto(producto);
     alert('Producto agregado exitosamente ✅');
-    window.location.href = 'https://capstyle.onrender.com/'
+    window.location.href = '/admin_productos'
 }
 
 function validar(producto) {
