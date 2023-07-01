@@ -81,7 +81,7 @@ if(nameInput.value === '' && emailInput.value === '' && passwordInput.value === 
  }else{
     
     // Envía los datos al servidor
-    fetch('http://localhost:3001/api/users', {
+    fetch('https://capstyle.onrender.com/api/users', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',
