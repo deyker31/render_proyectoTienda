@@ -42,6 +42,7 @@
     "glob": "^7.1.6",
     "glob-parent": "^6.0.2",
     "has": "^1.0.3",
+    "http-proxy-middleware": "^2.0.6",
     "inflight": "^1.0.6",
     "inherits": "^2.0.4",
     "is-binary-path": "^2.1.0",
@@ -100,7 +101,7 @@
   "scripts": {
     "dev": "tailwindcss -i ./public/css/main.css -o ./public/css/styles.css  --watch",
     "start": "nodemon index.js",
-    "server": "json-server --watch ./database/bd.json",
+    "server": "json-server --watch ./database/bd.json --middlewares ./middleware.js --port 3001",
     "prueba": "nodemon ./src/index.mjs",
     "todos": "concurrently \"npm run server\" \"npm run start\""
   },

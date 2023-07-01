@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/gorras';
+const url = 'http://localhost:3001/apiServer/gorras';
 
 
 export const nuevoProducto = async (producto) => {

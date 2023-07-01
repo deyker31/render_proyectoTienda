@@ -7,6 +7,17 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 
+const jsonServer = require('json-server');
+// Crea un router de json-server
+const router = jsonServer.router('./database/bd.json');
+// Crea un middleware de json-server
+const middlewares = jsonServer.defaults();
+// Configura el servidor Express para usar el middleware de json-server
+app.use(middlewares);
+
+// Configura el servidor Express para usar el router de json-server en la ruta /apiServer
+app.use('/apiServer', router);
+
 //mongoDB
 
 (async()=>{
