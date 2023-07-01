@@ -1,4 +1,4 @@
-const url = 'http://localhost:3001/apiServer/gorras';
+const url = 'https://capstyle.onrender.com/apiServer/gorras';
 
 
 export const nuevoProducto = async (producto) => {
