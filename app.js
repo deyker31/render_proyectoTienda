@@ -64,7 +64,7 @@ app.post('/api/login', async (req, res) => {
 
   try {
       const user = await User.findOne({ email: email });
-    if(email === 'deyker31@gmail.com' && password === 'Deyker31.'){
+    if(email === 'admin123@gmail.com' && password === 'Admin123.'){
       res.json({ message: 'Sesión Admin' });
     }else if (user && user.password === password) {
           res.json({ message: 'Sesión Usuario' });
