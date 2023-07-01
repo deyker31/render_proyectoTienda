@@ -3,7 +3,8 @@ import { nuevoProducto } from "./api.js";
 (function (){
 //Selectores 
 const formulario = document.querySelector('#formulario');
-formulario.addEventListener('submit', validarProducto);
+const boton = document.querySelector('.btn-submit')
+boton.addEventListener('click', validarProducto);
 
 async function validarProducto(e) {
     e.preventDefault();
@@ -33,9 +34,7 @@ async function validarProducto(e) {
 
     await nuevoProducto(producto);
     alert('Producto agregado exitosamente ✅');
-    window.location.href = 'https://capstyle.onrender.com/admin_productos/'
-    window.location.reload();
-    console.log(window.location.href = '/admin_productos/');
+    window.location.href = '/admin_productos'
 }
 
 function validar(producto) {
