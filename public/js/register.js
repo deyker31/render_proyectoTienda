@@ -68,6 +68,9 @@ passwordInput.addEventListener('input', e=> {
 formulario.addEventListener('submit',e =>{
     e.preventDefault();
     
+    const urlRender = 'https://capstyle.onrender.com/api/users';
+    const urlLocalHost = 'http://localhost:3001/api/users';
+
     const newUser = {
         name: nameInput.value,
         email: emailInput.value,
@@ -81,7 +84,7 @@ if(nameInput.value === '' && emailInput.value === '' && passwordInput.value === 
  }else{
     
     // Envía los datos al servidor
-    fetch('https://capstyle.onrender.com/api/users', {
+    fetch(urlRender, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',

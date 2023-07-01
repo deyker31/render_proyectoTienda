@@ -7,6 +7,10 @@ const botonUsuario = document.querySelector('.ul-usuario-1');
 
 formL.addEventListener('submit', e => {
     e.preventDefault();
+
+    const urlRender = 'https://capstyle.onrender.com/api/login';
+    const urlLocalHost = 'http://localhost:3001/api/login';
+
     const email = emailInputLogin.value;
     const password = passwordInputLogin.value;
     let loginUser = {
@@ -15,7 +19,7 @@ formL.addEventListener('submit', e => {
   };
 
   if(loginUser){
-    fetch('http://localhost:3001/api/login', {
+    fetch(urlRender, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
