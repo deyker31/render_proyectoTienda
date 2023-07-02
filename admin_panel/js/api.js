@@ -19,32 +19,34 @@ export const nuevoProducto = async (producto) => {
 
 }*/
 
-export const nuevoProducto = async (producto) => {
+export const nuevoProducto = async (producto)=> {
   
-    // Obtener contenido de db.json usando fetch
-    const res = await fetch('http://localhost:3001/apiServer'); 
-    const db = await res.json();
+    try {
+      const respuesta = await fetch('../../database/bd.json', {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+      });
   
-    // Acceder a gorras  
-    const gorras = db.gorras;
+      if (!respuesta.ok) {
+        throw new Error(`HTTP error! status: ${respuesta.status}`);
+      } else {
+        const db = await respuesta.json();
+        db.gorras.push(producto);
   
-    // Agregar producto
-    gorras.push(producto);
+        await fetch('../../database/bd.json', {
+          method: 'PUT',
+          body: JSON.stringify(db),
+          headers: { 'Content-Type': 'application/json' },
+        });
   
-    // Actualizar db.gorras en el objeto 
-    db.gorras = gorras;
-  
-    
-    // Hacer petición POST para actualizar db.json 
-    await fetch('http://localhost:3001/apiServer', {
-      method: 'POST',  
-      body: JSON.stringify(db),
-      headers: {
-        'Content-Type': 'application/json' 
+        console.log('Producto agregado exitosamente');
       }
-    });
-  
+    } catch (error) {
+      console.log(error);
+    }
   }
+
+
 
 export const obtenerProductos = async () => {
     try {
