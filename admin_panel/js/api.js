@@ -70,20 +70,5 @@ export const eliminarProducto = async id =>{
     } catch (error) {
         console.log(error);
     }
-} */
+}  */
 
-export const eliminarProducto = async id => {
-    try {
-        const response = await fetch(`${url}/${id}`, {
-            method: 'DELETE'
-        });
-
-        if (response.ok) {
-            console.log('Producto eliminado exitosamente ✅');
-        } else {
-            console.error('Error al eliminar el producto:', response.status);
-        }
-    } catch (error) {
-        console.error('Error al eliminar el producto:', error);
-    }
-};

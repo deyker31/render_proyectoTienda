@@ -1,5 +1,5 @@
 import { obtenerProductos, eliminarProducto } from "./api.js";
-
+import axios from 'axios';
 
 (function (){
 
@@ -37,7 +37,7 @@ async function mostrarProductos() {
        
 }
 
-
+/*
 async function confirmarEliminar(e){
     if(e.target.classList.contains('eliminar')){
         const productoId = parseInt(e.target.dataset.producto);
@@ -45,15 +45,38 @@ async function confirmarEliminar(e){
 
         const confirmar = confirm('Quieres eliminar este producto?❌');
         if(confirmar){
-            eliminarProducto(productoId)
-                .then(() => {
-                    alert('Producto eliminado exitosamente ✅');
-                    window.location.href = 'https://capstyle.onrender.com/admin_productos/';
-                })
-                .catch(error => {
-                    console.error('Error al eliminar el producto:', error);
-                });
+            await eliminarProducto(productoId);
+            alert('Producto eliminado exitosamente ✅');
+            window.location.href = 'https://capstyle.onrender.com/admin_productos/';  
         }
     }
 }
-})();
+*/
+const url = 'https://capstyle.onrender.com/apiServer/gorras';
+
+async function eliminarProducto(productoId) {
+    try {
+      const response = await axios.delete(`${url}/${productoId}`);
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+async function confirmarEliminar(e) {
+    if (e.target.classList.contains('eliminar')) {
+      const productoId = (parseInt.target.dataset.producto);
+        console.log(productoId);
+  
+      const confirmar = confirm('¿Quieres eliminar este producto? ❌');
+      if (confirmar) {
+        await eliminarProducto(productoId);
+    alert('Producto eliminado exitosamente');
+        window.location = 'https://capstyle.onrender.com/admin_productos/';
+      }
+    }
+  }
+
+
+})();    
+
