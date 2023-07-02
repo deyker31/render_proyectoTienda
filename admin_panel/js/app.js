@@ -45,9 +45,14 @@ async function confirmarEliminar(e){
 
         const confirmar = confirm('Quieres eliminar este producto?❌');
         if(confirmar){
-            await eliminarProducto(productoId);
-            //alert('Producto eliminado exitosamente ✅');
-            //window.location.href = 'https://capstyle.onrender.com/admin_productos/';  
+            eliminarProducto(productoId)
+                .then(() => {
+                    alert('Producto eliminado exitosamente ✅');
+                    window.location.href = 'https://capstyle.onrender.com/admin_productos/';
+                })
+                .catch(error => {
+                    console.error('Error al eliminar el producto:', error);
+                });
         }
     }
 }
