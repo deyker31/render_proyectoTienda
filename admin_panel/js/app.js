@@ -1,4 +1,4 @@
-import { obtenerProductos, eliminarProducto } from "./api.js";
+import { obtenerProductos } from "./api.js";
 
 
 (function (){
