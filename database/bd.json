@@ -539,15 +539,6 @@
       "marca": "Nike",
       "color": "blanco",
       "imagen": "/recursos/img/products/60.png"
-    },
-    {
-      "nombre": "Gorra clasica",
-      "precio": 100,
-      "marca": "Adidas",
-      "tipo": "Nike",
-      "color": "blanco",
-      "imagen": "/recursos/img/products/nuevo.png",
-      "id": 61
     }
   ],
   "users": [
