@@ -1,7 +1,7 @@
 import { obtenerProductos } from "./api.js";
-import gorras from "./../../app.js"
+import {gorras} from "./../../app.js"
 
-console.log(gorras);
+
 (function (){
 
 console.log(gorras);
