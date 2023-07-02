@@ -22,7 +22,7 @@ export const nuevoProducto = async (producto) => {
 export const nuevoProducto = async (producto)=> {
   
     try {
-      const respuesta = await fetch('https://capstyle.onrender.com/apiServer/gorras', {
+      const respuesta = await fetch('https://capstyle.onrender.com/bd.json', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       });
@@ -31,11 +31,11 @@ export const nuevoProducto = async (producto)=> {
         throw new Error(`HTTP error! status: ${respuesta.status}`);
       } else {
         const db = await respuesta.json();
-        db.push(producto);
+        db.gorras.push(producto);
   
-        await fetch('https://capstyle.onrender.com/apiServer/gorras', {
+        await fetch('https://capstyle.onrender.com/bd.json', {
           method: 'POST',
-          body: JSON.stringify(db),
+          body: JSON.stringify(db.gorras),
           headers: { 'Content-Type': 'application/json' },
         });
   
