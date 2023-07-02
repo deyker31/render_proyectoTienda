@@ -34,7 +34,7 @@ export const nuevoProducto = async (producto)=> {
         db.push(producto);
   
         await fetch('https://capstyle.onrender.com/apiServer/gorras', {
-          method: 'PUT',
+          method: 'POST',
           body: JSON.stringify(db),
           headers: { 'Content-Type': 'application/json' },
         });
