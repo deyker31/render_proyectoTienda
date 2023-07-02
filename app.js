@@ -180,6 +180,25 @@ producto.save()
   });
 });
 
+////
+////Extraer gorras
+////
+
+
+// Extraer todas las gorras 
+Gorra.find()
+  .then(gorras => {
+    
+    // Iterar sobre las gorras
+    gorras.forEach(gorra => {
+      console.log(gorra.nombre);      
+      console.log(gorra.precio); 
+    });
+    
+    // Pasar las gorras a la vista
+    res.render('/admin_productos', { gorras });
+  })
+  .catch(err => console.log(err));
 
 
 //IMPORTANTE
