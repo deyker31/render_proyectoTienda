@@ -80,6 +80,10 @@ export const eliminarProducto = async id => {
 
         if (response.ok) {
             console.log('Producto eliminado exitosamente ✅');
+            setTimeout(()=>{
+                window.location.href = 'https://capstyle.onrender.com/admin_productos/'; 
+            },1000);
+            
         } else {
             console.error('Error al eliminar el producto:', response.status);
         }
