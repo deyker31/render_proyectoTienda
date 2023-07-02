@@ -1,4 +1,5 @@
 import { obtenerProductos } from "./api.js";
+const fs = require('fs');
 
 
 (function (){
@@ -56,28 +57,42 @@ const url = 'https://capstyle.onrender.com/apiServer/gorras';
 
 async function eliminarProducto(productoId) {
     try {
-      const response = await fetch(`${url}/${productoId}`, {
-        method: 'DELETE',
-      });
-      return response.json();
+      const data = fs.readFileSync('../../database/bd.json');
+      const productos = JSON.parse(data);
+  
+      // Encuentra el índice del producto a eliminar
+      const index = productos.findIndex(producto => producto.id === productoId);
+  
+      if (index !== -1) {
+        // Elimina el producto del array
+        productos.splice(index, 1);
+  
+        // Guarda los cambios en el archivo JSON
+        fs.writeFileSync('../../database/bd.json', JSON.stringify(productos));
+  
+        console.log('Producto eliminado exitosamente');
+      } else {
+        console.log('No se encontró el producto');
+      }
     } catch (error) {
       console.error(error);
     }
   }
 
-  async function confirmarEliminar(e) {
-    if (e.target.classList.contains('eliminar')) {
-      const productoId = parseInt(e.target.dataset.producto);
-      console.log(productoId);
   
-      const confirmar = confirm('¿Quieres eliminar este producto? ❌');
-      if (confirmar) {
-        await eliminarProducto(productoId);
-        alert('Producto eliminado exitosamente ✅');
-        window.location.href = 'https://capstyle.onrender.com/admin_productos/';
-      }
+async function confirmarEliminar(e) {
+    if (e.target.classList.contains('eliminar')) {
+    const productoId = parseInt(e.target.dataset.producto);
+    console.log(productoId);
+    const confirmar = confirm('¿Quieres eliminar este producto? ❌');
+if (confirmar) {
+  await eliminarProducto(productoId);
+  alert('Producto eliminado exitosamente ✅');
+  window.location.href = 'https://capstyle.onrender.com/admin_productos/';
+}
     }
-  }
+}
+
 
 
 })();    
