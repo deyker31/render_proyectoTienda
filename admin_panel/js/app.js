@@ -37,6 +37,13 @@ async function mostrarProductos() {
        
 }
 
+async function eliminarProducto(productoId) {
+    // Aquí va tu código para eliminar el producto...
+
+    // Una vez que el producto se ha eliminado, recargas la página.
+    window.location.reload();
+}
+
 
 async function confirmarEliminar(e){
     if(e.target.classList.contains('eliminar')){
@@ -45,7 +52,7 @@ async function confirmarEliminar(e){
 
         const confirmar = confirm('Quieres eliminar este producto?❌');
         if(confirmar){
-            //await eliminarProducto(productoId);
+            await eliminarProducto(productoId);
             alert('Producto eliminado exitosamente ✅');
             window.location.reload();
             //window.location.href = 'https://capstyle.onrender.com/admin_productos/';  
