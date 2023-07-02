@@ -1,5 +1,6 @@
 import { obtenerProductos } from "./api.js";
-const fs = require('fs');
+import fs from 'fs';
+
 
 
 (function (){
