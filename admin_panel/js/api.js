@@ -22,7 +22,7 @@ export const nuevoProducto = async (producto) => {
 export const nuevoProducto = async (producto)=> {
   
     try {
-      const respuesta = await fetch('../database/bd.json', {
+      const respuesta = await fetch('https://capstyle.onrender.com/apiServer', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       });
@@ -33,7 +33,7 @@ export const nuevoProducto = async (producto)=> {
         const db = await respuesta.json();
         db.gorras.push(producto);
   
-        await fetch('../database/bd.json', {
+        await fetch('https://capstyle.onrender.com/apiServer', {
           method: 'PUT',
           body: JSON.stringify(db),
           headers: { 'Content-Type': 'application/json' },
