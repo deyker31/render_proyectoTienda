@@ -32,7 +32,7 @@ async function validarProducto(e) {
         return;
     }
 
-
+//Enviar datos a un api rest
     fetch('/apiGorras', {
   method: 'POST',
   headers: {

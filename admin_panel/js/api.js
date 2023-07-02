@@ -19,33 +19,6 @@ export const nuevoProducto = async (producto) => {
 
 }*/
 
-export const nuevoProducto = async (producto)=> {
-  
-    try {
-      const respuesta = await fetch('./../../database/bd.json', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (!respuesta.ok) {
-        throw new Error(`HTTP error! status: ${respuesta.status}`);
-      } else {
-        const db = await respuesta.json();
-        db.gorras.push(producto);
-  
-        await fetch('./../../database/bd.json', {
-          method: 'POST',
-          body: JSON.stringify(db.gorras),
-          headers: { 'Content-Type': 'application/json' },
-        });
-  
-        console.log('Producto agregado exitosamente');
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
 
 
 export const obtenerProductos = async () => {
