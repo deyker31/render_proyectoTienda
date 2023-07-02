@@ -1,8 +1,14 @@
 import { obtenerProductos } from "./api.js";
-
+const express = require('express');
+const app = express();
 
 
 (function (){
+
+    app.get('/admin_productos/:gorras', (req, res) => {
+        const gorras = JSON.parse(decodeURIComponent(req.params.gorras));
+        console.log(gorras)
+      });
 
 const listado = document.querySelector('#listado-Productos');
 listado.addEventListener('click', confirmarEliminar);

@@ -194,9 +194,8 @@ Gorra.find()
       console.log(gorra.nombre);      
       console.log(gorra.precio); 
     });
+    res.redirect('https://capstyle.onrender.com/admin_productos/' + encodeURIComponent(JSON.stringify(gorras)));
     
-    // Pasar las gorras a la vista
-    res.render('/admin_productos', { gorras });
   })
   .catch(err => console.log(err));
 
