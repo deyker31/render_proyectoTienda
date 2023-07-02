@@ -38,6 +38,28 @@ async function mostrarProductos() {
 }
 
 
+function eliminarProducto(productoId) {
+    return fetch(`https://capstyle.onrender.com/apiServer/gorras/${productoId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Error al eliminar el producto');
+        }
+    })
+    .then(data => {
+        // Producto eliminado exitosamente
+        alert('Producto eliminado exitosamente ✅');
+        window.location.reload();
+    })
+    .catch(error => {
+        // Manejar el error
+        console.error(error);
+        alert('Error al eliminar el producto');
+    });
+}
 
 async function confirmarEliminar(e){
     if(e.target.classList.contains('eliminar')){
@@ -47,10 +69,7 @@ async function confirmarEliminar(e){
         const confirmar = confirm('Quieres eliminar este producto?❌');
         if(confirmar){
             await eliminarProducto(productoId);
-            alert('Producto eliminado exitosamente ✅');
-            setTimeout(function (){
-                window.location.href = 'https://capstyle.onrender.com/admin_productos/'
-            }, 500)
+            //alert('Producto eliminado exitosamente ✅');
             //window.location.href = 'https://capstyle.onrender.com/admin_productos/';  
         }
     }
