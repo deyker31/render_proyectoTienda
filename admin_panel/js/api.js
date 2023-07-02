@@ -71,4 +71,13 @@ export const eliminarProducto = async id =>{
         console.log(error);
     }
 }  */
+export const eliminarProducto = async id =>{
+    try {
+        await fetch(`${url}/${id}`,{
+        method:'DELETE'       
+        })
+    } catch (error) {
+        console.log(error);
+    }
+} 
 
