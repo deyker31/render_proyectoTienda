@@ -1,39 +1,32 @@
+require('dotenv').config();
+const express = require('express');
+const app = express();
 const mongoose = require('mongoose');
-const fs = require('fs');
 
-//me traigo la informacion de mi base de datos json con la libreria fs
-const gorrasJson = fs.readFileSync('./database/bd.json');
-const array = JSON.parse(gorrasJson);
-
+// Definir el esquema el modelo de datos
 //  Esquema de mis productos (gorras)
 const GorraSchema = new mongoose.Schema({
-  id: Number,
-  nombre: String,  
-  precio: Number,
-  imagen: String ,
-  marca: String ,
-  tipo: String ,
-  color: String 
-});
-
-//const RegistroSchema = new mongoose.Schema({/* define tu esquema aquí */});
-//const UserSchema = new mongoose.Schema({/* define tu esquema aquí */});
-
-const Gorras = mongoose.model('Gorras', GorraSchema);
-//const Registro = mongoose.model('Registro', RegistroSchema);
-
-
-
-array.gorras.forEach(function(obj){
-  Gorras.findOne(obj).then(existeGorra => {
-    if(!existeGorra){
-      let gorra = new Gorras(obj);
-      gorra.save();
-    }
-  }).catch(err => {
-    throw err;
+    id: Number,
+    nombre: String,  
+    precio: Number,
+    imagen: String ,
+    marca: String ,
+    tipo: String ,
+    color: String 
   });
+
+const Objeto = mongoose.model('Objeto', GorraSchema);
+
+// Ruta para recibir la solicitud POST
+app.post('https://capstyle.onrender.com/apiGorras/', (req, res) => {
+  const objeto = new Objeto(req.body);
+
+  // Guardar el objeto en MongoDB
+  objeto.save()
+    .then(()=> {
+      res.json({ mensaje: 'Objeto guardado en MongoDB' });
+    })
+    .then(error => {
+      res.status(500).json({ error: 'Error al guardar el objeto en MongoDB' });
+    });
 });
-
-
-

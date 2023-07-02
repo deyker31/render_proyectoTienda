@@ -1,4 +1,4 @@
-import { nuevoProducto } from "./api.js";
+//import { nuevoProducto } from "./api.js";
 
 (function (){
 //Selectores 
@@ -32,8 +32,24 @@ async function validarProducto(e) {
         return;
     }
 
-    await nuevoProducto(producto);
-    alert('Producto agregado exitosamente ✅');
+
+    fetch('https://capstyle.onrender.com/apiGorras/', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(producto),
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log('Objeto enviado a MongoDB:', data);
+  })
+  .catch(error => {
+    console.error('Error al enviar el objeto:', error);
+  });
+
+    //await nuevoProducto(producto);
+    //alert('Producto agregado exitosamente ✅');
     //window.location.href = '/admin_productos'
 }
 
