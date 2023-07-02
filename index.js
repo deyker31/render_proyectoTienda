@@ -14,8 +14,8 @@ const app2 = require('./models/gorras');
 const express = require('express');
 const app = express();
 
-app.use('/app1', app1);
-app.use('/app2', app2);
+app.use('/', app1);
+app.use('/apiGorras', app2);
 
 const server = app.listen(3001, () => {
   console.log('Listening on port 3001');
