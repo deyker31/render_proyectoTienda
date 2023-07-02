@@ -150,7 +150,7 @@ app.put('/registros/:id', async function (req, res) {
     }
   });
 
-
+/*
   //nuevoProducto
 
   //  Esquema de mis productos (gorras)
@@ -179,6 +179,7 @@ objeto.save()
     res.status(500).json({ error: 'Error al guardar el objeto en MongoDB' });
   });
 });
+ */
 
 
 //IMPORTANTE
