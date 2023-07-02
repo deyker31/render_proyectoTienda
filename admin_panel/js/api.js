@@ -1,7 +1,7 @@
 const url = 'https://capstyle.onrender.com/apiServer/gorras';  //url produccion
 //const url = 'http://localhost:3001/apiServer/gorras' //url desarrollo
-const db = require('./db.json');
-const fs = require('fs');
+
+
 /* 
 export const nuevoProducto = async (producto) => {
 
@@ -19,16 +19,32 @@ export const nuevoProducto = async (producto) => {
 
 }*/
 
-export const nuevoProducto = (producto) => {
-    db.products.push(producto);
+export const nuevoProducto = async (producto) => {
+  
+    // Obtener contenido de db.json usando fetch
+    const res = await fetch('http://localhost:3001/apiServer'); 
+    const db = await res.json();
+  
+    // Acceder a gorras  
+    const gorras = db.gorras;
+  
+    // Agregar producto
+    gorras.push(producto);
+  
+    // Actualizar db.gorras en el objeto 
+    db.gorras = gorras;
+  
     
-    // Escribir de nuevo el archivo con los cambios
-    fs.writeFile('./db.json', JSON.stringify(db), (err) => {
-      if (err) throw err;
-      console.log('db.json actualizado!');
-    })
+    // Hacer petición POST para actualizar db.json 
+    await fetch('http://localhost:3001/apiServer', {
+      method: 'POST',  
+      body: JSON.stringify(db),
+      headers: {
+        'Content-Type': 'application/json' 
+      }
+    });
+  
   }
-
 
 export const obtenerProductos = async () => {
     try {
