@@ -3,6 +3,18 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
+//mongoDB
+
+(async()=>{
+    try {
+        await mongoose.connect(process.env.MONGO_URI_TEST,{ useNewUrlParser: true, useUnifiedTopology: true });
+        console.log('Te has conectado a mongoDB');
+    } catch (error) {
+        console.log(error);
+    }
+})();  
+
+
 //  Esquema de mis productos (gorras)
 const GorraSchema = new mongoose.Schema({
     id: Number,
@@ -35,4 +47,8 @@ const GorraSchema = new mongoose.Schema({
 //IMPORTANTE
 app.use(express.json());
 
-module.exports = app;
+// Iniciar el servidor
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+    console.log(`Servidor en el puerto ${port}`);
+});
