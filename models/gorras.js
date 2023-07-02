@@ -18,7 +18,7 @@ const GorraSchema = new mongoose.Schema({
 const Objeto = mongoose.model('Objeto', GorraSchema);
 
 // Ruta para recibir la solicitud POST
-app.post('https://capstyle.onrender.com/apiGorras/', (req, res) => {
+app.post('/apiGorras', (req, res) => {
   const objeto = new Objeto(req.body);
 
   // Guardar el objeto en MongoDB

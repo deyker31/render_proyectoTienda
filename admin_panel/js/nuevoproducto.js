@@ -33,7 +33,7 @@ async function validarProducto(e) {
     }
 
 
-    fetch('https://capstyle.onrender.com/apiGorras/', {
+    fetch('/apiGorras', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
