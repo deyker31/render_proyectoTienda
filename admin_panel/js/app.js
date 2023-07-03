@@ -2,6 +2,13 @@ import { obtenerProductos } from "./api.js";
 
 (function (){
 
+    fetch('https://capstyle.onrender.com/gorrasBd')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
 const listado = document.querySelector('#listado-Productos');
 listado.addEventListener('click', confirmarEliminar);
 document.addEventListener('DOMContentLoaded', mostrarProductos);

@@ -183,8 +183,16 @@ producto.save()
 ////
 ////Extraer gorras
 ////
-const number = 42;  
-module.exports = number;
+
+app.get('/gorrasBd', (req, res) => {
+  const myObject = {
+    name: 'John',
+    age: 30,
+    city: 'New York'
+  };
+  res.send(myObject);
+});
+
 // Extraer todas las gorras 
 Gorra.find()
   .then(gorras => {
