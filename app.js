@@ -183,10 +183,8 @@ producto.save()
 ////
 ////Extraer gorras
 ////
-module.exports = {
-  Gorra
-}
-
+const number = 42;  
+module.exports = number;
 // Extraer todas las gorras 
 Gorra.find()
   .then(gorras => {

@@ -1,7 +1,7 @@
-import {Gorra} from '../../app.js' 
+const { number } = require('../../app.js');
 
 console.log("Veamos");
-console.log(Gorra);
+console.log(number);
 /*
 Gorra.find({}).then(products => {
   // products contiene todos los documentos de productos 
