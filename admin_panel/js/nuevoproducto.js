@@ -31,24 +31,7 @@ async function validarProducto(e) {
         mostrarAlerta('Todos los campos son obligatorios');
         return;
     }
-
-    /*
-//Enviar datos a un api rest
-    fetch('/apiGorras', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(producto),
-})
-  .then(response => response.json())
-  .then(data => {
-    console.log('Objeto enviado a MongoDB:', data);
-  })
-  .catch(error => {
-    console.error('Error al enviar el objeto:', error);
-  }); */
-
+    //enviar datos a funcion nuevoProducto
     await nuevoProducto(producto);
     alert('Producto agregado exitosamente ✅');
     window.location.href = '/admin_productos'

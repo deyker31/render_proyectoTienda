@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     //verificar si el cliente existe
     const parametrosURL = new URLSearchParams(window.location.search);
     const idProducto = parseInt(parametrosURL.get('id'));
-
+    console.log(idProducto);
     const producto = await obtenerProducto(idProducto);
     
     mostrarProducto(producto);
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function mostrarProducto(producto) {
     
-    const {  nombre, precio, marca, tipo, color, imagen, id } = producto;
+    const {  nombre, precio, marca, tipo, color, imagen, _id } = producto;
     
     nombreInput.value = nombre;
     precioInput.value = precio;
@@ -34,7 +34,7 @@ function mostrarProducto(producto) {
     tipoInput.value = tipo;
     imagenInput.value = imagen;
     colorInput.value = color;
-    idInput.value = id;
+    idInput.value = _id;
 }
 
 async function validarProducto(e) {

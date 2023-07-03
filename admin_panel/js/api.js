@@ -2,23 +2,6 @@ const url = 'https://capstyle.onrender.com/gorrasBd';  //url produccion
 //const url = 'http://localhost:3001/apiServer/gorras' //url desarrollo
 
 
-/* 
-export const nuevoProducto = async (producto) => {
-
-    try {
-        await fetch(url, {
-            method: 'POST',
-            body: JSON.stringify(producto),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-    } catch (error) {
-        console.log(error);
-    }
-
-}*/
-
 export const nuevoProducto = async (producto) => {
 
     try {
@@ -49,7 +32,7 @@ export const obtenerProductos = async () => {
 
 
 export const obtenerProducto = async (id) => {
-    const resultado = await fetch(`${url}/${id}`);
+    const resultado = await fetch(`/apiGorras/${id}`);
     const producto = await resultado.json();
     return producto; 
   }

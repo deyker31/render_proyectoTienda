@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', mostrarProductos);
 async function mostrarProductos() {
     const productos = await obtenerProductos();
 
-    
-
     productos.forEach(producto => {
         const { nombre, precio, marca, tipo, _id} = producto;
         
@@ -38,22 +36,6 @@ async function mostrarProductos() {
     });
        
 }
-
-/*
-async function confirmarEliminar(e){
-    if(e.target.classList.contains('eliminar')){
-        const productoId = parseInt(e.target.dataset.producto);
-        console.log(productoId);
-
-        const confirmar = confirm('Quieres eliminar este producto?❌');
-        if(confirmar){
-            await eliminarProducto(productoId);
-            alert('Producto eliminado exitosamente ✅');
-            window.location.href = 'https://capstyle.onrender.com/admin_productos/';  
-        }
-    }
-}
-*/
 
 async function confirmarEliminar(e){
     if(e.target.classList.contains('eliminar')){
