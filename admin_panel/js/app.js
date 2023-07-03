@@ -1,5 +1,5 @@
 //import { obtenerProductos } from "./api.js";
-const Gorra = require('./../../app.js');
+const express = require('express');
 (function (){
 
 const listado = document.querySelector('#listado-Productos');
