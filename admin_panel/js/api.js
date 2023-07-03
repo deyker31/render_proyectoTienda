@@ -19,6 +19,21 @@ export const nuevoProducto = async (producto) => {
 
 }*/
 
+export const nuevoProducto = async (producto) => {
+
+    try {
+        await fetch('https://capstyle.onrender.com/apiGorras', {
+            method: 'POST',
+            body: JSON.stringify(producto),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    } catch (error) {
+        console.log(error);
+    }
+
+}
 
 
 export const obtenerProductos = async () => {

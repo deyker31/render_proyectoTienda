@@ -1,4 +1,4 @@
-//import { nuevoProducto } from "./api.js";
+import { nuevoProducto } from "./api.js";
 
 (function (){
 //Selectores 
@@ -32,6 +32,7 @@ async function validarProducto(e) {
         return;
     }
 
+    /*
 //Enviar datos a un api rest
     fetch('/apiGorras', {
   method: 'POST',
@@ -46,11 +47,11 @@ async function validarProducto(e) {
   })
   .catch(error => {
     console.error('Error al enviar el objeto:', error);
-  });
+  }); */
 
-    //await nuevoProducto(producto);
-    //alert('Producto agregado exitosamente ✅');
-    //window.location.href = '/admin_productos'
+    await nuevoProducto(producto);
+    alert('Producto agregado exitosamente ✅');
+    window.location.href = '/admin_productos'
 }
 
 function validar(producto) {

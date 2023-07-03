@@ -70,10 +70,6 @@ async function confirmarEliminar(e){
         }
     }
 }
-  
-
-
-
 
 })();    
 
