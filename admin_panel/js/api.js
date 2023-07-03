@@ -37,21 +37,6 @@ export const obtenerProducto = async (id) => {
     return producto; 
   }
 
-/*
-export const editarProducto = async producto => {
-    try {
-        await fetch(`${url}/${producto.id}`, {
-            method: 'PUT',
-            body: JSON.stringify(producto),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-    } catch (error) {
-        console.log(error);
-    }
-}*/
-
 export const editarProducto = async (id, nuevoProducto) => {
     try {
       await fetch(`/apiGorras/${id}`, {

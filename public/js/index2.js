@@ -38,14 +38,14 @@ let nextAction = (leftPosition,trackWidth,listWidth,slickWidth,track) => {
 //Generar html ultimas novedades
 
 const contenedor = document.querySelector('.slick-track');
-const url = '/bd.json';
+const url = 'https://capstyle.onrender.com/gorrasBd';
 
 
 (async()=>{
     try {
         const res = await fetch(url);
         const data = await res.json();
-        mostrarHTML(data.gorras);
+        mostrarHTML(data);
         
     } catch (error) {
         console.log(error);

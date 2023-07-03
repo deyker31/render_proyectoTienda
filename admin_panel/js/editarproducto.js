@@ -53,11 +53,10 @@ async function validarProducto(e) {
         mostrarAlerta('Todos los campos son obligatorios');
         return;
     }
-    console.log(producto.id)
-    //await editarProducto(producto);
+   
     await editarProducto(producto.id, producto);
     alert('Producto editado exitosamente ✅')
-    //window.location.href = '/admin_productos';
+    window.location.href = '/admin_productos';
 
 }
 

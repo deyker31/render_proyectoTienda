@@ -23,15 +23,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
 //cargar base de datos
 
 function bdJson(){
-    const url = '/bd.json';
+    const url = 'https://capstyle.onrender.com/gorrasBd';
     (async ()=>{
         const res = await fetch(url);
         const data = await res.json();
         
-        mostrarHTML(data.gorras);
-        eventInput(data.gorras);
-        eventCheckBox(data.gorras);
-        noSeleccion(data.gorras);
+        mostrarHTML(data);
+        eventInput(data);
+        eventCheckBox(data);
+        noSeleccion(data);
     })();
 }
 
@@ -61,7 +61,7 @@ function mostrarHTML(gorras){
                     <span class="text-2xl md:text-3xl font-bold text-gray-900  dark:text-white">$${gorra.precio}</span>
                 </div>
                 <div class="flex items-center justify-center">
-                <a href="#" class="btn-carrito text-white px-2 lg:px-3 rounded-lg text-xs lg:text-sm py-2 bg-orange-500 uppercase" data-id="${gorra.id}">Añadir al carrito</a>
+                <a href="#" class="btn-carrito text-white px-2 lg:px-3 rounded-lg text-xs lg:text-sm py-2 bg-orange-500 uppercase" data-id="${gorra._id}">Añadir al carrito</a>
                 </div>
             </div>
         </div>
@@ -95,7 +95,6 @@ function eventInput(bd){
 }
 
 
-
 function eventCheckBox(bd){
     colorFilter.addEventListener('input', e=>{
         let element = e.target.value;
@@ -106,9 +105,6 @@ function eventCheckBox(bd){
     
 } 
 
-
-
-  
 
 //funciones de filtrado por input
 
