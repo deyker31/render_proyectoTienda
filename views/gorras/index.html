@@ -146,6 +146,7 @@
              </nav>
         </header>
         <main id="main-gorras" class="pt-20 container flex flex-col justify-between bg-gray-50 dark:bg-gray-900">
+           
             <section class="rounded-xl grid grid-cols-2 mx-20 mt-6 mb-4 bg-orange-400" id="filtro-gorras">
                 <div id="filter-color" class="flex  items-center  gap-2">
                     <section id="color-filter" class="p-2 grid grid-cols-2 md:grid-cols-4">
@@ -210,11 +211,23 @@
                    </div>
 
             </section>
-            <section id="loader" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto mb-10 overflow-x-hidden w-11/12 gap-5" id="products">
+            <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto mb-10 overflow-x-hidden w-11/12 gap-5" id="products">
+                
                 <div id="banner-carga">
-                    <!-- Aquí puedes insertar tu SVG de carga -->
-                    <p>CARGANDO</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                        <circle cx="50" cy="50" r="40" stroke-width="10" stroke="#ececec"/>
+                        <circle cx="50" cy="50" r="40" stroke="#006400" stroke-width="10"  stroke-dasharray="240" stroke-dashoffset="240" >
+                          <animateTransform 
+                            attributeName="transform"
+                            type="rotate" 
+                            from="0 50 50"
+                            to="360 50 50"  
+                            dur="2s"
+                            repeatCount="indefinite" />
+                        </circle>
+                        </svg>
                 </div>
+                
             </section>
             
         </main>

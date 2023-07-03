@@ -1,13 +1,12 @@
 //selectores
-window.addEventListener('load', function(){
-    const loader = document.getElementById('loader');
-    loader.style.display = 'none';
-  });
+
 
 const contenedor = document.querySelector('#products');
 const categoriaGorras = document.querySelector('#categoria-gorras');
 const selectGorras = document.querySelector('#select-filter');
 const colorFilter = document.querySelector('#color-filter');
+
+
 const infoGorras = {
     id: '',
     nombre: '',
@@ -18,16 +17,17 @@ const infoGorras = {
     color:''
 }
 
-
-//cargar base de datos + HTML
-document.addEventListener('DOMContentLoaded', ()=>{
-    // Ocultar el banner de carga
+window.addEventListener('load', function(){
     const bannerCarga = document.getElementById('banner-carga');
-    bannerCarga.style.display = 'none';
-    bdJson();
+    //quitar banner despues de 0.5 segundos
+    setTimeout(()=>{
+        bannerCarga.style.display = 'none';
+    }, 500)
+    
 });
 
 //cargar base de datos
+bdJson();
 
 function bdJson(){
     const url = 'https://capstyle.onrender.com/gorrasBd';
