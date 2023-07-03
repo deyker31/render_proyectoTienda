@@ -1,4 +1,4 @@
-import {Gorra} from './app.js' 
+import {Gorra} from '../../app.js' 
 
 console.log("Veamos");
 console.log(Gorra);
