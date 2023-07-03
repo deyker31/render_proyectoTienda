@@ -187,6 +187,7 @@ producto.save()
 
 
 // Extraer todas las gorras 
+/*
 Gorra.find()
   .then(gorras => {
    
@@ -196,6 +197,18 @@ Gorra.find()
 
   })
   .catch(err => console.log(err));
+*/
+
+app.get('/gorrasBd', (req, res) => {
+  Gorra.find()
+    .then(gorras => {
+      res.send(gorras);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ error: 'Error al extraer las gorras de MongoDB' });
+    });
+});
 
 //IMPORTANTE
 app.use(express.json());
