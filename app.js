@@ -184,25 +184,21 @@ producto.save()
 ////Extraer gorras
 ////
 
-app.get('/gorrasBd', (req, res) => {
-  const myObject = {
-    name: 'John',
-    age: 30,
-    city: 'New York'
-  };
-  res.send(myObject);
-});
+
 
 // Extraer todas las gorras 
 Gorra.find()
   .then(gorras => {
     
     // Iterar sobre las gorras
-    gorras.forEach(gorra => {
+    /*gorras.forEach(gorra => {
       console.log(gorra.nombre);      
       console.log(gorra.precio); 
+    });*/
+   
+    app.get('/gorrasBd', (req, res) => {
+      res.send(gorras);
     });
-    //res.redirect('https://capstyle.onrender.com/admin_productos/' + encodeURIComponent(JSON.stringify(gorras)));
 
   })
   .catch(err => console.log(err));
