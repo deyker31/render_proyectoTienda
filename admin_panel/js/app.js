@@ -58,28 +58,15 @@ async function confirmarEliminar(e){
 async function confirmarEliminar(e){
     if(e.target.classList.contains('eliminar')){
         const productoId = e.target.dataset.producto;
-        //const productoId = e.target.dataset.producto;
-        console.log(productoId);
+
+        //console.log(productoId);
 
         const confirmar = confirm('Quieres eliminar este producto?❌');
         if(confirmar){
             await eliminarProducto(productoId);
 
-            /*
-            fetch(`/apiGorras/${productoId}`, {
-                method: 'DELETE'
-              })
-                .then(response => response.json())
-                .then(data => {
-                  console.log(data.mensaje);
-                })
-                .catch(error => {
-                  console.error('Error al eliminar el producto:', error);
-                });
-                */
-
-            //alert('Producto eliminado exitosamente ✅');
-            //window.location.href = 'https://capstyle.onrender.com/admin_productos/';  
+            alert('Producto eliminado exitosamente ✅');
+            window.location.reload(); 
         }
     }
 }

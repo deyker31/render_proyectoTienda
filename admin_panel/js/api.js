@@ -1,4 +1,4 @@
-const url = 'https://capstyle.onrender.com/apiServer/gorras';  //url produccion
+const url = 'https://capstyle.onrender.com/gorrasBd';  //url produccion
 //const url = 'http://localhost:3001/apiServer/gorras' //url desarrollo
 
 
@@ -23,7 +23,7 @@ export const nuevoProducto = async (producto) => {
 
 export const obtenerProductos = async () => {
     try {
-        const resultado = await fetch("https://capstyle.onrender.com/gorrasBd");
+        const resultado = await fetch(url);
         const productos = await resultado.json();
 
         return productos;
@@ -64,26 +64,6 @@ export const editarProducto = async producto => {
         console.log(error);
     }
 }
-/*
-export const eliminarProducto = async id =>{
-    try {
-        await fetch(`${url}/${id}`,{
-        method:'DELETE'       
-        })
-    } catch (error) {
-        console.log(error);
-    }
-}  */
-/*
-export const eliminarProducto = async id =>{
-    try {
-        await fetch(`${url}/${id}`,{
-        method:'DELETE'       
-        })
-    } catch (error) {
-        console.log(error);
-    }
-} */
 
 export const eliminarProducto = async (id) =>{
     try {
