@@ -184,21 +184,6 @@ producto.save()
 ////Extraer gorras
 ////
 
-
-
-// Extraer todas las gorras 
-/*
-Gorra.find()
-  .then(gorras => {
-   
-    app.get('/gorrasBd', (req, res) => {
-      res.send(gorras);
-    });
-
-  })
-  .catch(err => console.log(err));
-*/
-
 app.get('/gorrasBd', (req, res) => {
   Gorra.find()
     .then(gorras => {
@@ -209,6 +194,25 @@ app.get('/gorrasBd', (req, res) => {
       res.status(500).json({ error: 'Error al extraer las gorras de MongoDB' });
     });
 });
+
+
+///
+// Ruta para eliminar un producto por su ID
+///
+app.delete('/apiGorras/:id', (req, res) => {
+  const id = req.params.id;
+
+  //inar el producto por su ID
+  Gorra.findByIdAndDelete(id)
+    .then(() => {
+      res({ mensaje: 'Producto eliminado de MongoDB' });
+    })
+    .catch(error => {
+      console.error('Error al eliminar el producto:', error);
+      res.status(500).json({ error: 'Error al eliminar el producto de MongoDB' });
+    });
+});
+
 
 //IMPORTANTE
 app.use(express.json());

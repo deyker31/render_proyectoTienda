@@ -1,4 +1,4 @@
-import { obtenerProductos, eliminarProducto } from "./api.js";
+import { obtenerProductos } from "./api.js";
 
 (function (){
 
@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', mostrarProductos);
 async function mostrarProductos() {
     const productos = await obtenerProductos();
 
-    //console.log(data);
+    
 
     productos.forEach(producto => {
-        const { nombre, precio, marca, tipo, id } = producto;
+        const { nombre, precio, marca, tipo, _id} = producto;
+        
         const fila = document.createElement('tr');
         
         fila.innerHTML += `
@@ -28,8 +29,8 @@ async function mostrarProductos() {
         </td>
 
         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-        <a href = "editar-producto.html?id=${id}" id="${id}" class="text-teal-600 hover:text-teal-900 mr-5">Editar</a>
-            <a href="#" data-producto="${id}" class="text-red-600 hover:text-red-900 eliminar">Eliminar</a>
+        <a href = "editar-producto.html?id=${_id}" id="${_id}" class="text-teal-600 hover:text-teal-900 mr-5">Editar</a>
+            <a href="#" data-producto="${_id}" class="text-red-600 hover:text-red-900 eliminar">Eliminar</a>
         </td>
     `
         listado.appendChild(fila);
@@ -56,13 +57,23 @@ async function confirmarEliminar(e){
 
 async function confirmarEliminar(e){
     if(e.target.classList.contains('eliminar')){
-        //const productoId = parseInt(e.target.dataset.producto);
         const productoId = e.target.dataset.producto;
+        //const productoId = e.target.dataset.producto;
         console.log(productoId);
 
         const confirmar = confirm('Quieres eliminar este producto?❌');
         if(confirmar){
-            await eliminarProducto(productoId);
+            //await eliminarProducto(productoId);
+            fetch(`/apiGorras/${productoId}`, {
+                method: 'DELETE'
+              })
+                .then(response => response.json())
+                .then(data => {
+                  console.log(data.mensaje);
+                })
+                .catch(error => {
+                  console.error('Error al eliminar el producto:', error);
+                });
             //alert('Producto eliminado exitosamente ✅');
             //window.location.href = 'https://capstyle.onrender.com/admin_productos/';  
         }

@@ -85,19 +85,4 @@ export const eliminarProducto = async id =>{
     }
 } */
 
-export const eliminarProducto = async(id) => {
-    try {
-      const productoEliminado = await fetch(`https://capstyle.onrender.com/gorrasBd/${id}`, {
-        method: 'DELETE'
-      });
-  
-      if (productoEliminado.ok) {
-        console.log('Producto eliminado exitosamente');
-      } else {
-        console.log('Error al eliminar el producto');
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
