@@ -12,7 +12,7 @@ const colorInput = document.querySelector('#color');
 document.addEventListener('DOMContentLoaded', async () => {
     //verificar si el cliente existe
     const parametrosURL = new URLSearchParams(window.location.search);
-    const idProducto = parseInt(parametrosURL.get('id'));
+    const idProducto = parametrosURL.get('id');
     console.log(idProducto);
     const producto = await obtenerProducto(idProducto);
     
