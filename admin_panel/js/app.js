@@ -1,8 +1,4 @@
 //import { obtenerProductos } from "./api.js";
-require('dotenv').config();
-const express = require('express');
-const app = express();
-const mongoose = require('mongoose');
 
 (function (){
 

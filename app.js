@@ -183,7 +183,9 @@ producto.save()
 ////
 ////Extraer gorras
 ////
-
+module.exports = {
+  Gorra
+}
 
 // Extraer todas las gorras 
 Gorra.find()
@@ -198,7 +200,6 @@ Gorra.find()
 
   })
   .catch(err => console.log(err));
-  module.exports = Gorra;
 
 //IMPORTANTE
 app.use(express.json());
