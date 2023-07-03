@@ -195,11 +195,10 @@ Gorra.find()
       console.log(gorra.precio); 
     });
     //res.redirect('https://capstyle.onrender.com/admin_productos/' + encodeURIComponent(JSON.stringify(gorras)));
-    module.exports = gorras;
 
   })
   .catch(err => console.log(err));
-
+  module.exports = Gorra;
 
 //IMPORTANTE
 app.use(express.json());

@@ -1,10 +1,6 @@
-import { obtenerProductos } from "./api.js";
-import {gorras} from "./../../app.js"
-
-
+//import { obtenerProductos } from "./api.js";
+const Gorra = require('./../../app.js');
 (function (){
-
-console.log(gorras);
 
 const listado = document.querySelector('#listado-Productos');
 listado.addEventListener('click', confirmarEliminar);
