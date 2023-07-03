@@ -1,4 +1,4 @@
-import { obtenerProductos } from "./api.js";
+import { obtenerProductos, eliminarProducto } from "./api.js";
 
 (function (){
 
@@ -63,7 +63,9 @@ async function confirmarEliminar(e){
 
         const confirmar = confirm('Quieres eliminar este producto?❌');
         if(confirmar){
-            //await eliminarProducto(productoId);
+            await eliminarProducto(productoId);
+
+            /*
             fetch(`/apiGorras/${productoId}`, {
                 method: 'DELETE'
               })
@@ -74,6 +76,8 @@ async function confirmarEliminar(e){
                 .catch(error => {
                   console.error('Error al eliminar el producto:', error);
                 });
+                */
+
             //alert('Producto eliminado exitosamente ✅');
             //window.location.href = 'https://capstyle.onrender.com/admin_productos/';  
         }

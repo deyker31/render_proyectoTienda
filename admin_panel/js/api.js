@@ -85,4 +85,14 @@ export const eliminarProducto = async id =>{
     }
 } */
 
+export const eliminarProducto = async (id) =>{
+    try {
+        await fetch(`/apiGorras/${id}`,{
+        method:'DELETE'       
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 
