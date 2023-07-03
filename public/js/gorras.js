@@ -1,4 +1,8 @@
 //selectores
+window.addEventListener('load', function(){
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';
+  });
 
 const contenedor = document.querySelector('#products');
 const categoriaGorras = document.querySelector('#categoria-gorras');
@@ -17,6 +21,9 @@ const infoGorras = {
 
 //cargar base de datos + HTML
 document.addEventListener('DOMContentLoaded', ()=>{
+    // Ocultar el banner de carga
+    const bannerCarga = document.getElementById('banner-carga');
+    bannerCarga.style.display = 'none';
     bdJson();
 });
 
