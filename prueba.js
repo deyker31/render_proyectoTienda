@@ -5,3 +5,4 @@ Gorra.find({}).then(products => {
   // Muestra los productos en tu página HTML
   console.log(products)
 })
+console.log(Gorra);

@@ -1,4 +1,4 @@
-//import { obtenerProductos } from "./api.js";
+import { obtenerProductos } from "./api.js";
 
 (function (){
 
