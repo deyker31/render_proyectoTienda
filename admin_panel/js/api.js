@@ -38,17 +38,6 @@ export const obtenerProducto = async (id) => {
   }
 
 
-/*
-export const obtenerProducto = async (id) => {
-    try {
-        const resultado = await fetch(`${url} / ${id}`);
-        const producto = await resultado.json();
-        return producto;
-    } catch (error) {
-        console.log(error);
-    }
-}  */
-
 export const editarProducto = async producto => {
     try {
         await fetch(`${url}/${producto.id}`, {

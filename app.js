@@ -213,6 +213,21 @@ app.delete('/apiGorras/:id', (req, res) => {
     });
 });
 
+// Obtener un producto por su ID
+app.get('/apiGorras/:id', (req, res) => {
+  const id = req.params.id;
+
+  // Buscar el producto por su ID en la base de datos
+  Gorra.findById(id)
+    .then(producto => {
+      res.json(producto);
+    })
+    .catch(error => {
+      console.log(error);
+      res.status(500).json({ error: 'Error al obtener el producto de MongoDB' });
+    });
+});
+
 
 //IMPORTANTE
 app.use(express.json());
