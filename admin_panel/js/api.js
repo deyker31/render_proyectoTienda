@@ -23,7 +23,7 @@ export const nuevoProducto = async (producto) => {
 
 export const obtenerProductos = async () => {
     try {
-        const resultado = await fetch(url);
+        const resultado = await fetch("https://capstyle.onrender.com/gorrasBd");
         const productos = await resultado.json();
 
         return productos;

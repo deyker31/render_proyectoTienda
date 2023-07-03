@@ -1,7 +1,7 @@
 import { obtenerProductos } from "./api.js";
 
 (function (){
-
+    /*
     fetch('https://capstyle.onrender.com/gorrasBd')
     .then(response => response.json())
     .then(data => {
@@ -9,17 +9,17 @@ import { obtenerProductos } from "./api.js";
     })
     .catch((error) => {
       console.error('Error:', error);
-    });
+    });*/
 
 const listado = document.querySelector('#listado-Productos');
 listado.addEventListener('click', confirmarEliminar);
+document.addEventListener('DOMContentLoaded', mostrarProductos);
 
 
-
-async function mostrarProductos(data) {
+async function mostrarProductos() {
     const productos = await obtenerProductos();
-    
-    console.log(data);
+
+    //console.log(data);
 
     productos.forEach(producto => {
         const { nombre, precio, marca, tipo, id } = producto;
