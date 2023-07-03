@@ -56,7 +56,8 @@ async function confirmarEliminar(e){
 
 async function confirmarEliminar(e){
     if(e.target.classList.contains('eliminar')){
-        const productoId = parseInt(e.target.dataset.producto);
+        //const productoId = parseInt(e.target.dataset.producto);
+        const productoId = e.target.dataset.producto;
         console.log(productoId);
 
         const confirmar = confirm('Quieres eliminar este producto?❌');
