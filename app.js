@@ -189,12 +189,6 @@ producto.save()
 // Extraer todas las gorras 
 Gorra.find()
   .then(gorras => {
-    
-    // Iterar sobre las gorras
-    /*gorras.forEach(gorra => {
-      console.log(gorra.nombre);      
-      console.log(gorra.precio); 
-    });*/
    
     app.get('/gorrasBd', (req, res) => {
       res.send(gorras);
