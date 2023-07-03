@@ -228,6 +228,22 @@ app.get('/apiGorras/:id', (req, res) => {
     });
 });
 
+// Editar un producto
+app.put('/apiGorras/:id', (req, res) => {
+  const id = req.params.id;
+  const nuevoProducto = req.body;
+  
+  // Actualizar el producto por su ID en la base de datos
+  Gorra.findByIdAndUpdate(id, nuevoProducto)
+    .then(() => {
+      res.json({ mensaje: 'Producto actualizado en MongoDB '});
+    })
+    .catch(error => {
+      console.log(error);
+      res.status(500).json({ error: 'Error al actualizar el producto en MongoDB' });
+    });
+});
+
 
 //IMPORTANTE
 app.use(express.json());

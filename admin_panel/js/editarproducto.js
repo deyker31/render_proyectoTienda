@@ -46,7 +46,7 @@ async function validarProducto(e) {
         tipo: tipoInput.value,
         color: colorInput.value,
         imagen: imagenInput.value,
-        id: parseInt(idInput.value)
+        id: idInput.value
     }
     
     if (validar(producto)) {
@@ -56,7 +56,7 @@ async function validarProducto(e) {
 
     await editarProducto(producto);
     alert('Producto editado exitosamente ✅')
-    window.location.href = 'index.html';
+    window.location.href = '/admin_productos';
 
 }
 

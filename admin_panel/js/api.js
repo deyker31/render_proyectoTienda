@@ -37,7 +37,7 @@ export const obtenerProducto = async (id) => {
     return producto; 
   }
 
-
+/*
 export const editarProducto = async producto => {
     try {
         await fetch(`${url}/${producto.id}`, {
@@ -50,7 +50,21 @@ export const editarProducto = async producto => {
     } catch (error) {
         console.log(error);
     }
-}
+}*/
+
+export const editarProducto = async (id, nuevoProducto) => {
+    try {
+      await fetch(`/apiGorras/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(nuevoProducto)
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
 export const eliminarProducto = async (id) =>{
     try {
