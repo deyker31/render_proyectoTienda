@@ -18,6 +18,14 @@ app.use(middlewares);
 // Configura el servidor Express para usar el router de json-server en la ruta /apiServer
 app.use('/apiServer', router);  
 
+//
+
+//const paypalApi = require('./src/index.js');
+//app.use('/Paypal', paypalApi);
+const pagoRouter = require('./src/routes/pago.js');
+app.use('/paypal', pagoRouter);
+
+
 //mongoDB
 
 (async()=>{
