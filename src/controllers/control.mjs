@@ -8,7 +8,7 @@ let accessToken;
 accessToken = await getAccessToken();
 //para traerme el precio total
 async function getData() {
-  const url = 'http://localhost:3000/registros'; 
+  const url = 'https://capstyle.onrender.com/apiServer/registros'; 
   const respuesta = await fetch(url);
   data = await respuesta.json();
   return data;
@@ -45,7 +45,7 @@ export const createOrder = async (req, res) => {
             {
                 amount: {
                     currency_code: "USD",
-                    value: data[0].precio
+                    value: "25.00"
                 },
             },
         ],

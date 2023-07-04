@@ -6,7 +6,7 @@ const path = require('path');
 //
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
-/*
+
 const jsonServer = require('json-server');
 // Crea un router de json-server
 const router = jsonServer.router('./database/bd.json');
@@ -16,7 +16,7 @@ const middlewares = jsonServer.defaults();
 app.use(middlewares);
 
 // Configura el servidor Express para usar el router de json-server en la ruta /apiServer
-app.use('/apiServer', router); */
+app.use('/apiServer', router);  
 
 //mongoDB
 
@@ -107,12 +107,14 @@ app.use('/admin_productos/nuevoproducto', express.static(path.resolve('admin_pan
 app.use('/pago/alerta',express.static(path.resolve('src', 'pagoCancelado')));// conexion de pagoalerta
 app.use('/alerta',express.static(path.resolve('views', 'pagoExitoso')));// conexion de pagoalerta
 
+
+/*
 //usando fs para llear datos de bd
 const fs = require('fs');
 
 async function leerBaseDeDatos() {
   return new Promise((resolve, reject) => {
-    fs.readFile('http://localhost:3000/registros', 'utf8', (error, data) => {
+    fs.readFile('https://capstyle.onrender.com/apiServer/registros', 'utf8', (error, data) => {
       if (error) {
         reject(error);
       } else {
@@ -148,7 +150,7 @@ app.put('/registros/:id', async function (req, res) {
       console.error("Error al actualizar precio en la base de datos:", error);
       res.status(500).send("Error al actualizar precio en la base de datos.");
     }
-  });
+  }); */
 
 ////
 ////NUEVOPRODUCTO

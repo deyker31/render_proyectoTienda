@@ -43,7 +43,7 @@ function metodoDePago(){
     
     botonPaypal.addEventListener('click', async (e)=>{
         e.preventDefault();
-        const respuesta = await fetch('http://localhost:3005/create-order',{
+        const respuesta = await fetch('https://capstyle.onrender.com/create-order',{
             method:'POST',
         })
         const data = await respuesta.json();
@@ -59,35 +59,9 @@ function metodoDePago(){
 
 function cargarPrecioBd(){
 window.addEventListener("load", async function() {
-    const url = 'http://localhost:3000/registros/1';
-    let objeto = {
-      id: 1,
-      precio: precioTotal2.toFixed(2)
-    };
   
-    try {
-      const res = await fetch(url, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ precio: objeto.precio })
-      });
-  
-      const data = await res.json();
-      if (objeto.precio !== data.precio) {
-        objeto.precio = data.precio;
-        await fetch(url, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ precio: objeto.precio })
-        });
-      }
-    } catch (error) {
-      console.log(error);
-    }
+  //AQUI VA EL PRECIO
+
   });  
 }
 
