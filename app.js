@@ -19,13 +19,11 @@ app.use(middlewares);
 app.use('/apiServer', router);  
 
 //
-
-//const paypalApi = require('./src/index.js');
-//app.use('/Paypal', paypalApi);
-const pagoRouter = require('./src/routes/pago.js');
-app.use('/paypal', pagoRouter);
-
-
+const paymentRoutes = require('./src/routes/pago.js');
+const { PORT } = require('./src/config.js');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use('/paypal', paymentRoutes);
 //mongoDB
 
 (async()=>{

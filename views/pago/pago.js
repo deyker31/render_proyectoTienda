@@ -1,5 +1,9 @@
 //Selectores
 //selectores productos
+
+ const url = 'https://capstyle.onrender.com/paypal/create-order' // url produccion
+ //const url = 'http://localhost:3001/paypal/create-order' // url desarrollo
+
 const carrito = JSON.parse(localStorage.getItem('carrito'));
 const precioTotal2 = JSON.parse(localStorage.getItem('precioTotal'));
 const btnPrecioTotal2 = document.querySelector(".total-pago");
@@ -40,10 +44,11 @@ function mostrarProductos(curso){
 
 function metodoDePago(){
     const botonPaypal = document.querySelector('#paypal-button');
-    
+
+
     botonPaypal.addEventListener('click', async (e)=>{
         e.preventDefault();
-        const respuesta = await fetch('https://capstyle.onrender.com/create-order',{
+        const respuesta = await fetch(url,{
             method:'POST',
         })
         const data = await respuesta.json();
