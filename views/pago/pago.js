@@ -87,3 +87,18 @@ window.addEventListener("load", async function() {
 }
 
 }
+
+const precio = localStorage.getItem('precioTotal');
+
+fetch('https://capstyle.onrender.com/precioTotal', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ precio: precioTotal2 }), // Envía el precio como un objeto JSON
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch((error) => {
+  console.error('Error:', error);
+});

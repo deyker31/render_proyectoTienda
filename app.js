@@ -17,8 +17,9 @@ app.use(middlewares);
 
 // Configura el servidor Express para usar el router de json-server en la ruta /apiServer
 app.use('/apiServer', router);  
-
-//
+/////
+//Paypal
+/////
 const paymentRoutes = require('./src/routes/pago.js');
 const { PORT } = require('./src/config.js');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -113,6 +114,13 @@ app.use('/admin_productos/nuevoproducto', express.static(path.resolve('admin_pan
 app.use('/pago/alerta',express.static(path.resolve('src', 'pagoCancelado')));// conexion de pagoalerta
 app.use('/alerta',express.static(path.resolve('views', 'pagoExitoso')));// conexion de pagoalerta
 
+
+app.post('/precioTotal', (req, res) => {
+  const precioTotal = req.body.precio; // Obtén el precio del cuerpo de la solicitud
+  // Realiza cualquier lógica necesaria con el precioTotal
+  // Devuelve una respuesta con los datos que necesites
+  res.json({ precioTotal });
+});
 
 /*
 //usando fs para llear datos de bd
