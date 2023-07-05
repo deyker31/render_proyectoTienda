@@ -1,6 +1,5 @@
 const { HOST, PAYPAL_API, PAYPAL_API_CLIENT, PAYPAL_API_SECRET, url2 } = require("../config");
 const axios = require("axios");
-const fetch = require('node-fetch');
 
 const url = `${PAYPAL_API}/v2/checkout/orders`; // url orden paypal api
 
