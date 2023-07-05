@@ -558,7 +558,8 @@
   "registros": [
     {
       "precio": "44.98",
-      "id": 1
+      "id": 1,
+      "precioTotal2": 49.98
     }
   ]
 }

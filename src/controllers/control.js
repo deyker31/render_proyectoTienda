@@ -4,24 +4,23 @@ const axios = require("axios");
 
 const url = `${PAYPAL_API}/v2/checkout/orders`; // url orden paypal api
 
-
-/*
-let data;
-data = await getData();
-
-
-//para traerme el precio total
-async function getData() {
-  const url = 'https://capstyle.onrender.com/precioTotal'; 
-  const respuesta = await fetch(url);
-  data = await respuesta.json();
-  return data;
-}
-getData();*/
-
 //extraer precioTotal
 
+let data;
 
+async function fetchData() {
+  data = await getData();
+  //console.log(data);
+}
+
+async function getData() {
+  const url = url2+'/apiServer/registros'; 
+  const respuesta = await fetch(url);
+  const data = await respuesta.json();
+  return data;
+}
+
+fetchData();
 
 //AccesToken
 
@@ -59,7 +58,7 @@ const createOrder = async (req, res) => {
             {
                 amount: {
                     currency_code: "USD",
-                    value: "10.00"
+                    value: data[0].precioTotal2
                 },
             },
         ],

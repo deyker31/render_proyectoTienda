@@ -65,9 +65,17 @@ function metodoDePago(){
 function cargarPrecioBd(){
 window.addEventListener("load", async function() {
   
-  //AQUI VA EL PRECIO
+  //AQUI VA EL PRECIO TOTAL
+  const id = 1
+  fetch(`https://capstyle.onrender.com/apiServer/registros/${id}`, {
+  method: 'PATCH',  
+  body: JSON.stringify({ precioTotal2 }),  
+  headers: {
+    'Content-Type': 'application/json'
+  }
+  })
 
-  });  
+});  
 }
 
  //
@@ -88,22 +96,6 @@ window.addEventListener("load", async function() {
 
 }
 
-
-
-let numero = 42; // El número que deseas enviar
-
-fetch('http://localhost:3001/precioTotal/', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({ numero: numero }), // Envía el número como un objeto JSON
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch((error) => {
-  console.error('Error:', error);
-});
 
 /*
 fetch('http://localhost:3001/otroEndpoint')
