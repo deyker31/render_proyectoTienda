@@ -5,6 +5,7 @@ const url = `${PAYPAL_API}/v2/checkout/orders`; // url orden paypal api
 
 //extraer precioTotal
 
+/*
 let data;
 
 async function fetchData() {
@@ -19,7 +20,23 @@ async function getData() {
   return data;
 }
 
+fetchData();*/
+
+let data;
+
+async function fetchData() {
+  data = await getData();
+  //console.log(data);
+}
+
+async function getData() {
+  const urld = url2+'/apiServer/registros'; 
+  const respuesta = await axios.get(urld);
+  return respuesta.data;
+}
+
 fetchData();
+
 
 //AccesToken
 
