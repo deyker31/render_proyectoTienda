@@ -20,17 +20,7 @@ async function getData() {
 getData();*/
 
 //extraer precioTotal
-let data;
 
-fetch('https://capstyle.onrender.com/precioTotal')
-.then(response => response.json())
-.then(responseData => {
-  data = responseData.precioTotal; // Asigna el valor a la variable global
-  console.log(data); // Aquí puedes hacer lo que necesites con la variable global
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
 
 
 //AccesToken
@@ -69,7 +59,7 @@ const createOrder = async (req, res) => {
             {
                 amount: {
                     currency_code: "USD",
-                    value: data
+                    value: "10.00"
                 },
             },
         ],

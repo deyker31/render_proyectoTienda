@@ -88,17 +88,32 @@ window.addEventListener("load", async function() {
 
 }
 
-const precio = localStorage.getItem('precioTotal');
 
-fetch('https://capstyle.onrender.com/precioTotal', {
+
+let numero = 42; // El número que deseas enviar
+
+fetch('http://localhost:3001/precioTotal/', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
   },
-  body: JSON.stringify({ precio: precioTotal2 }), // Envía el precio como un objeto JSON
+  body: JSON.stringify({ numero: numero }), // Envía el número como un objeto JSON
 })
 .then(response => response.json())
 .then(data => console.log(data))
 .catch((error) => {
   console.error('Error:', error);
 });
+
+/*
+fetch('http://localhost:3001/otroEndpoint')
+  .then(response => response.json())
+  .then(data => {
+    const precioTotal = data.precioTotal;
+    // Usa el precioTotal como sea necesario
+    console.log(precioTotal);
+  })
+  .catch(error => {
+    // Maneja cualquier error que pueda ocurrir al enviar la solicitud
+    console.error(error);
+  }); */
