@@ -95,17 +95,3 @@ window.addEventListener("load", async function() {
 }
 
 }
-
-
-/*
-fetch('http://localhost:3001/otroEndpoint')
-  .then(response => response.json())
-  .then(data => {
-    const precioTotal = data.precioTotal;
-    // Usa el precioTotal como sea necesario
-    console.log(precioTotal);
-  })
-  .catch(error => {
-    // Maneja cualquier error que pueda ocurrir al enviar la solicitud
-    console.error(error);
-  }); */

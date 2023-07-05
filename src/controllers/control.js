@@ -14,8 +14,8 @@ async function fetchData() {
 }
 
 async function getData() {
-  const url = url2+'/apiServer/registros'; 
-  const respuesta = await fetch(url);
+  const urld = url2+'/apiServer/registros'; 
+  const respuesta = await fetch(urld);
   const data = await respuesta.json();
   return data;
 }
