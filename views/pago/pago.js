@@ -52,7 +52,7 @@ function metodoDePago(){
             method:'POST',
         })
         const data = await respuesta.json();
-        //console.log(data)
+        console.log(data)
         window.location.href = data.links[1].href
     })
     
