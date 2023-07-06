@@ -804,11 +804,6 @@ video {
   margin-bottom: 0.75rem;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -1200,10 +1195,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-52 {
-  width: 13rem;
 }
 
 .min-w-full {
@@ -3431,6 +3422,7 @@ body > div{
 /*mensaje de producto agregado al carrito*/
 
 #alert-agregarproducto {
+  z-index: 9999;
   transition: all 0.4s ease;
   transform: translateY(30px);
   opacity: 0;
@@ -4340,14 +4332,14 @@ input[type=checkbox]:checked {
     margin-bottom: 0px;
   }
 
-  .sm\:my-5 {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-
   .sm\:my-4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .sm\:my-5 {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .sm\:mb-5 {
@@ -4471,6 +4463,11 @@ input[type=checkbox]:checked {
     padding-right: 0.75rem;
   }
 
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -4479,11 +4476,6 @@ input[type=checkbox]:checked {
   .sm\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .sm\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 
   .sm\:pt-8 {

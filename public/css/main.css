@@ -91,6 +91,7 @@ body > div{
 
  /*mensaje de producto agregado al carrito*/
  #alert-agregarproducto {
+    z-index: 9999;
     transition: all 0.4s ease; 
     transform: translateY(30px);
     opacity: 0;

@@ -7,6 +7,7 @@ function checkLogged() {
       // El usuario ha iniciado sesión
       // Agrega aquí el código que necesites para mostrar la sesión iniciada
       document.getElementById('register-button').style.display = 'inline-block';
+      contenedor.classList.add('hidden');
       document.querySelector('.img-usuario-circulo').style.display = 'inline-block';
       if(bloque){
         bloque.style.display = "none";
@@ -22,7 +23,7 @@ function checkLogged() {
       });
     } else {
       // El usuario no ha iniciado sesión
-      // Agrega aquí el código que necesites para mostrar la página de inicio de sesión
+      //Código para mostrar la página de inicio de sesión
       document.getElementById('register-button').style.display = 'inline-block'
       contenedor.style.display = 'none'
     }
