@@ -318,15 +318,9 @@ function mostrarAgregarProducto(){
     const alerta = document.querySelector('#alert-agregarproducto');
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="w-full rounded-lg bg-green-200 px-4 my-4 ">
-              <div class="flex items-center justify-between px-6 py-4 mx-auto text-green-500 font-bold">
+        <div class="w-full rounded-lg bg-green-200 px-2 sm:px-4 my-2 sm:my-4 ">
+              <div class="flex items-center justify-between px-4 sm:px-6 py-2 sm:py-4 mx-auto text-green-500 font-bold">
                 <div class="flex ">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="mr-4 icon icon-tabler icon-tabler-alert-triangle" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                    <polyline points="11 12 12 12 12 16 13 16"></polyline>
-                  </svg>
                   <div class="text-center">
                   <p class="text-xs sm:text-sm md:text-base font-semibold tracking-wide uppercase">Producto agregado al carrito!</p>
                 </div>

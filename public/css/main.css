@@ -6,9 +6,73 @@
 header, main , footer{
     min-width: 100%;
 }
+
 body > div{
     overflow-x: hidden;
 }
+.respon-m {
+     /* establece una altura mínima */
+     min-height: 200px;
+  }
+
+
+  /*
+  body {
+    margin: 0;
+    padding: 0;
+    }
+    
+    header {
+    height: 80px;
+    }
+    
+    main {
+    padding-top: 20px;
+    }
+    
+    footer {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0px;
+    flex-direction: column;
+    }
+    
+    @media (max-width: 767px) {
+    header {
+    height: 60px;
+    }
+    }
+    
+    @media (max-width: 479px) {
+    header {
+    height: 40px;
+    }
+    }
+    
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+    
+    .min-h-screen {
+    min-height: 100vh;
+    }
+    
+    .overflow-x-hidden {
+    overflow-x: hidden;
+    }*/
+ 
+.body-prue{
+    display: flex;
+    flex-direction: column;
+     min-height: 100vh; 
+}
+          
+.main-prue {
+    flex: 1; /* Ocupa todo el espacio disponible*/
+}
+    
+    
 
 /*banner cargado*/
 

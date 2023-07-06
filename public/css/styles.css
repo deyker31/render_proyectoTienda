@@ -939,6 +939,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-40 {
+  margin-top: 10rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -1196,6 +1200,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-52 {
+  width: 13rem;
 }
 
 .min-w-full {
@@ -3343,6 +3351,68 @@ body > div{
   overflow-x: hidden;
 }
 
+.respon-m {
+  /* establece una altura mínima */
+  min-height: 200px;
+}
+
+/*
+  body {
+    margin: 0;
+    padding: 0;
+    }
+    
+    header {
+    height: 80px;
+    }
+    
+    main {
+    padding-top: 20px;
+    }
+    
+    footer {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0px;
+    flex-direction: column;
+    }
+    
+    @media (max-width: 767px) {
+    header {
+    height: 60px;
+    }
+    }
+    
+    @media (max-width: 479px) {
+    header {
+    height: 40px;
+    }
+    }
+    
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+    
+    .min-h-screen {
+    min-height: 100vh;
+    }
+    
+    .overflow-x-hidden {
+    overflow-x: hidden;
+    }*/
+
+.body-prue{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-prue {
+  flex: 1;
+  /* Ocupa todo el espacio disponible*/
+}
+
 /*banner cargado*/
 
 #banner-carga {
@@ -4275,6 +4345,11 @@ input[type=checkbox]:checked {
     margin-bottom: 1.25rem;
   }
 
+  .sm\:my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
   .sm\:mb-5 {
     margin-bottom: 1.25rem;
   }
@@ -4307,6 +4382,14 @@ input[type=checkbox]:checked {
     height: 7rem;
   }
 
+  .sm\:h-32 {
+    height: 8rem;
+  }
+
+  .sm\:h-9 {
+    height: 2.25rem;
+  }
+
   .sm\:w-10\/12 {
     width: 83.333333%;
   }
@@ -4331,8 +4414,16 @@ input[type=checkbox]:checked {
     width: 10rem;
   }
 
+  .sm\:w-60 {
+    width: 15rem;
+  }
+
   .sm\:w-64 {
     width: 16rem;
+  }
+
+  .sm\:w-9 {
+    width: 2.25rem;
   }
 
   .sm\:w-auto {
@@ -4383,6 +4474,20 @@ input[type=checkbox]:checked {
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sm\:pt-8 {
+    padding-top: 2rem;
   }
 
   .sm\:text-2xl {
@@ -4621,6 +4726,10 @@ input[type=checkbox]:checked {
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .md\:pt-2 {
+    padding-top: 0.5rem;
   }
 
   .md\:text-left {
