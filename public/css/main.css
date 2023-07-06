@@ -61,6 +61,8 @@ body > div{
     .overflow-x-hidden {
     overflow-x: hidden;
     }*/
+
+    /*Responsive pago header*/
  
 .body-prue{
     display: flex;
@@ -71,8 +73,33 @@ body > div{
 .main-prue {
     flex: 1; /* Ocupa todo el espacio disponible*/
 }
-    
-    
+
+@media (min-width:768px){
+    .header-respon{
+        margin-bottom: 135px;
+    }
+}
+@media (min-width:640px) and (max-width:767px){
+    .header-respon{
+        margin-bottom: 107px;
+    }
+}
+@media (min-width:321px) and (max-width:639px){
+    .header-respon{
+        margin-bottom: 55px;
+    }
+}
+@media (min-width:320px) and (max-width:320px){
+    .header-respon{
+        margin-bottom: 70px;
+    }
+}
+@media (min-width:200px) and (max-width:319px){
+    .header-respon{
+        margin-bottom: 80px;
+    }
+}
+  
 
 /*banner cargado*/
 
