@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geologica:wght@400&family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>Pago</title>
 </head>
-<body>
-    
+<body class="h-full">
+
     <header class="container w-full relative">
       <!-- Alerta pago cancelado paypal-->
         <section id="alert-cancel" class="items-center px-5 py-12 lg:px-20 fixed z-50 left-72 invisible">
@@ -51,81 +51,81 @@
                 </svg> </a> 
                 <div class="flex mr-10 text-black dark:text-white">
                 <img src="/recursos/img/logo/cerrar-llave.png" class="w-8 h-8 mx-2" alt="Logo candado cerrado">
-                <p class="">COMPRA SEGURA <br>100% PROTEGIDO</p>
+                <p class="text-sm md:text-md lg:text-lg">COMPRA SEGURA <br>100% PROTEGIDO</p>
                 </div>                
             </div>
             </section>
         </nav>
     </header>
 
-    <main class="grid grid-cols-2 container">
+    <main class="grid grid-cols-2 container overflow-x-hidden">
 
             <section class="bg-orange-200 dark:bg-gray-600 py-4">
-                <h2 class="text-3xl font-bold text-center dark:text-gray-100">Método de Pago</h2>
+                <h2 class="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-center dark:text-gray-100">Método de Pago</h2>
                 <form class="max-w-md mx-auto" >
 
-                   <div class="flex items-center justify-center my-3">
-                      <button id="paypal-button" class="dark:bg-yellow-300 dark:hover:bg-yellow-400 bg-yellow-400 hover:bg-yellow-500 py-1 px-14 rounded-lg">
-                        <img class="w-18 h-10" src="/recursos/img/logo/logo-paypal.svg" alt="Logo Paypal">
+                   <div class="flex items-center justify-center my-2 md:my-3">
+                      <button id="paypal-button" class="dark:bg-yellow-300 dark:hover:bg-yellow-400 bg-yellow-400 hover:bg-yellow-500 py-1 px-8 sm:px-10 md:px-14 rounded-lg">
+                        <img class="w-10 sm:w-24 md:w-40 h-4 sm:h-10 md:h-12" src="/recursos/img/logo/logo-paypal.svg" alt="Logo Paypal">
                       </button>
                    </div>
                    
-                   <div class="flex items-center justify-center my-3">
-                    <button id="nequi-button" class="dark:bg-blue-300 dark:hover:bg-blue-400 bg-blue-400 hover:bg-blue-500 py-1 px-14 rounded-lg">
-                      <img class="w-18 h-10" src="/recursos/img/logo/logo-nequi.svg" alt="Logo Nequi">
+                   <div class="flex items-center justify-center my-2 md:my-3">
+                    <button id="nequi-button" class="dark:bg-blue-300 dark:hover:bg-blue-400 bg-blue-400 hover:bg-blue-500 py-1 px-8 sm:px-10 md:px-14 rounded-lg">
+                      <img class="w-10 sm:w-24 md:w-40 h-4 sm:h-10 md:h-12" src="/recursos/img/logo/logo-nequi.svg" alt="Logo Nequi">
                     </button>
                  </div>
 
-                 <div class="flex items-center justify-center my-3">
-                  <button id="bancolombia-button" class="dark:bg-amber-300 dark:hover:bg-amber-400 bg-amber-400 hover:bg-amber-500  py-1 px-14 rounded-lg">
-                    <img class="w-18 h-10" src="/recursos/img/logo/logo-bancolombia.svg" alt="Logo Bancolombia">
+                 <div class="flex items-center justify-center my-2 md:my-3">
+                  <button id="bancolombia-button" class="dark:bg-amber-300 dark:hover:bg-amber-400 bg-amber-400 hover:bg-amber-500  px-8 sm:px-10 md:px-14 rounded-lg">
+                    <img class="w-10 sm:w-24 md:w-40 h-5 sm:h-10 md:h-12" src="/recursos/img/logo/logo-bancolombia.svg" alt="Logo Bancolombia">
                   </button>
                </div>
 
                   </form>
                 </section>
             <section class="bg-orange-300 py-2 dark:bg-gray-700">
-                <h2 class="text-3xl font-bold text-center dark:text-gray-100">Productos</h2>
-                <table class="mx-auto text-center my-2">
-                    <thead class="text-xl text-orange-600 dark:text-orange-500 ">
+                <h2 class="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-center dark:text-gray-100">Productos</h2>
+                <table class="mx-auto text-center my-1 md:my-2">
+                    <thead class="th-carrito text-orange-600 dark:text-orange-500 ">
                         <tr>
-                        <th class="px-2">Imagen</th>
+                        <th class="px-1 md:px-2">Imagen</th>
                         <th>Nombre</th>
-                        <th class="px-5">Precio</th>
+                        <th class="px-1 sm:px-3 md:px-5">Precio</th>
                         <th>Cantidad</th>
                         </tr>
                     </thead>
                     <tbody  id="contenedor-pago-productos" class="mx-auto"></tbody>
                 </table>
-                <p class="text-center text-xl font-sans dark:text-white">Total: <span class="total-pago font-bold"></span></p>
+                <p class="text-center text-xs sm:text-lg md:text-xl font-sans dark:text-white">Total: <span class="total-pago text-xs sm:text-base md:text-lg font-bold"></span></p>
             </section>
 
     </main>
     
 
-    <footer class="container flex flex-col" id="footer">
+    <footer class="container flex flex-col overflow-x-hidden" id="footer">
             
         <!-- Marca / Compañía -->
         <section class="brand bg-black grid grid-cols-3 py-3">
             <div class="my-auto">
-            <figure><img src="/recursos/img/logo/Logo 3.png" alt="Logo CapStyle" width="300" height="30"></figure>
-            <p class="text-gray-50 text-center font-semibold">Las gorras más economicas de Colombia</p>
+            <figure><img src="/recursos/img/logo/Logo 3.png" alt="Logo CapStyle" class="sm:w-64 md:w-72 sm:h-28 md:h-32"></figure>
+            <p class="text-gray-50 text-center text-xs md:text-lg font-semibold">Las gorras más economicas de Colombia</p>
             </div>
                 <div class="text-center my-auto">
-                <span class="text-white font-sans font-bold">SÍGANOS EN NUESTRAS REDES<span><br>
-                    <img class="p-2 mx-auto hover:bg-gray-800" src="/recursos/img/redes/whatsapp.png" alt="Logo Whatsapp">
-                    <img class="p-2 mx-auto hover:bg-gray-800" src="/recursos/img/redes/facebook.png" alt="Logo Facebook">
-                    <img class="p-2 mx-auto hover:bg-gray-800" src="/recursos/img/redes/instagram.png" alt="Logo Instagram">
+                <span class="text-white font-sans  text-xs md:text-lg  font-bold">SÍGANOS EN NUESTRAS REDES<span><br>
+                    <img class="p-1 md:p-2 mx-auto hover:bg-gray-800 md:w-12 md:h-12 w-8 h-8" src="/recursos/img/redes/whatsapp.png" alt="Logo Whatsapp">
+                    <img class="p-1 md:p-2 mx-auto hover:bg-gray-800 md:w-12 md:h-12 w-8 h-8" src="/recursos/img/redes/facebook.png" alt="Logo Facebook">
+                    <img class="p-1 md:p-2 mx-auto hover:bg-gray-800 md:w-12 md:h-12 w-8 h-8" src="/recursos/img/redes/instagram.png" alt="Logo Instagram">
                 </div>
             <address class="text-center">
-                <span class="text-orange-500 font-sans font-bold">CONTÁCTANOS<span><br>
+                <span class="text-orange-500 font-sans  text-xs md:text-lg font-bold">CONTÁCTANOS<span><br>
                 <div class="text-white info-footer font-serif font-light tracking-normal">   
                 <p>Cambios Sin Fronteras<br>
                 Calle 12<br>
                 Ciudad Bogotá <br>
                 </p> 
                 <p class="text-orange-400">Teléfono:</p><a href="tel:+1234567890">+57 320 6528657</a>
-                <p class="text-orange-400">E-Mail:</p> <a href="mailto:deyner.r76@gmail.com" >deyner.r76@gmail.com</a>
+                <p class="text-orange-400 ">E-Mail:</p> <a href="mailto:deyner.r76@gmail.com" class="text-xs md:text-base">deyner.r76@gmail.com</a>
                 </div>     
             </address>
         </section>
@@ -141,6 +141,7 @@
         </section>
        
     </footer>
+
 
     <script src="pago.js"></script>
     <script src="colorDarkMode.js"></script>

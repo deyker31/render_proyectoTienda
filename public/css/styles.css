@@ -804,6 +804,11 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -1089,6 +1094,10 @@ video {
   height: 1.5rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-8 {
   height: 2rem;
 }
@@ -1163,6 +1172,10 @@ video {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .w-7\/12 {
@@ -2495,9 +2508,9 @@ video {
   padding-right: 0px;
 }
 
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .px-2 {
@@ -2523,6 +2536,11 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .py-1 {
@@ -3325,10 +3343,10 @@ body > div{
   overflow-x: hidden;
 }
 
-/*banner*/
+/*banner cargado*/
 
 #banner-carga {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -3338,6 +3356,19 @@ body > div{
   justify-content: center;
   align-items: center;
   z-index: 9999;
+}
+
+/*mensaje de producto agregado al carrito*/
+
+#alert-agregarproducto {
+  transition: all 0.4s ease;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+#alert-agregarproducto.fade-in {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 /*efecto overlay del menu hamburguesa*/
@@ -3352,9 +3383,12 @@ body > div{
     pointer-events: none;
   }
 
-  .cambio-2 > section:not(.section-1),.cambio-2 > h3 {
+  .cambio-2 {
     filter: blur(3px) brightness(50%);
     pointer-events: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -3543,6 +3577,48 @@ header{
 
 .ul-carrito li:hover > ul{
   display: block;
+}
+
+/*Media query pago productos*/
+
+@media (min-width: 644px) {
+  .td-carrito{
+    font-size: 16px;
+  }
+
+  .th-carrito{
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 444px) and (max-width:643px) {
+  .td-carrito{
+    font-size: 10px;
+  }
+
+  .th-carrito{
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 328px) and (max-width:443px) {
+  .td-carrito{
+    font-size: 8px;
+  }
+
+  .th-carrito{
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 200px) and (max-width:327px) {
+  .td-carrito{
+    font-size: 6px;
+  }
+
+  .th-carrito{
+    font-size: 8px;
+  }
 }
 
 /*Imagen fondos*/
@@ -4219,8 +4295,16 @@ input[type=checkbox]:checked {
     height: 2.5rem;
   }
 
+  .sm\:h-14 {
+    height: 3.5rem;
+  }
+
   .sm\:h-16 {
     height: 4rem;
+  }
+
+  .sm\:h-28 {
+    height: 7rem;
   }
 
   .sm\:w-10\/12 {
@@ -4231,12 +4315,24 @@ input[type=checkbox]:checked {
     width: 3rem;
   }
 
+  .sm\:w-14 {
+    width: 3.5rem;
+  }
+
   .sm\:w-20 {
     width: 5rem;
   }
 
+  .sm\:w-24 {
+    width: 6rem;
+  }
+
   .sm\:w-40 {
     width: 10rem;
+  }
+
+  .sm\:w-64 {
+    width: 16rem;
   }
 
   .sm\:w-auto {
@@ -4269,6 +4365,21 @@ input[type=checkbox]:checked {
     padding: 0.25rem;
   }
 
+  .sm\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .sm\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .sm\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -4279,9 +4390,19 @@ input[type=checkbox]:checked {
     line-height: 2rem;
   }
 
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .sm\:text-xl {
@@ -4307,6 +4428,16 @@ input[type=checkbox]:checked {
   .md\:my-1 {
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
+  }
+
+  .md\:my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .md\:my-3 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
   }
 
   .md\:mb-1 {
@@ -4345,12 +4476,20 @@ input[type=checkbox]:checked {
     height: 2.5rem;
   }
 
+  .md\:h-12 {
+    height: 3rem;
+  }
+
   .md\:h-16 {
     height: 4rem;
   }
 
   .md\:h-20 {
     height: 5rem;
+  }
+
+  .md\:h-32 {
+    height: 8rem;
   }
 
   .md\:h-40 {
@@ -4367,6 +4506,14 @@ input[type=checkbox]:checked {
 
   .md\:w-10 {
     width: 2.5rem;
+  }
+
+  .md\:w-12 {
+    width: 3rem;
+  }
+
+  .md\:w-16 {
+    width: 4rem;
   }
 
   .md\:w-20 {
@@ -4438,6 +4585,10 @@ input[type=checkbox]:checked {
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
+  .md\:p-2 {
+    padding: 0.5rem;
+  }
+
   .md\:p-5 {
     padding: 1.25rem;
   }
@@ -4447,9 +4598,24 @@ input[type=checkbox]:checked {
     padding-right: 2.5rem;
   }
 
+  .md\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .md\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
   .md\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .md\:px-6 {
@@ -4478,6 +4644,11 @@ input[type=checkbox]:checked {
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:text-lg {
@@ -4629,6 +4800,11 @@ input[type=checkbox]:checked {
   .lg\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .lg\:text-sm {

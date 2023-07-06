@@ -5,7 +5,7 @@ const contenedor = document.querySelector('#products');
 const categoriaGorras = document.querySelector('#categoria-gorras');
 const selectGorras = document.querySelector('#select-filter');
 const colorFilter = document.querySelector('#color-filter');
-
+const fragment = document.createDocumentFragment();
 
 const infoGorras = {
     id: '',
@@ -74,9 +74,12 @@ function mostrarHTML(gorras){
         </div>
 
         `
-        contenedor.appendChild(div);
+        fragment.appendChild(div);
     })
-
+    requestAnimationFrame(() => {
+        contenedor.appendChild(fragment);
+      });
+    
 }
 
 

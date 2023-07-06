@@ -22,6 +22,12 @@
 <body>
     <div class="page-gorras">
         <header class="container" id="header">
+
+             <!-- Alerta agregar producto-->
+        <section id="alert-agregarproducto" class="flex flex-col items-center justify-center absolute w-full px-4 sm:px-20 text-center invisible">
+            
+            </section>  
+
             <!-- marca, logo, nombre de compañía -->
             <!-- marca, logo, nombre de compañía -->
             <nav class="nav-main flex justify-between items-center dark:bg-gray-800 bg-white shadow-md">
@@ -211,21 +217,19 @@
                    </div>
 
             </section>
+            
             <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto mb-10 overflow-x-hidden w-11/12 gap-5" id="products">
                 
                 <div id="banner-carga">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
-                        <circle cx="50" cy="50" r="40" stroke-width="10" stroke="#ececec"/>
-                        <circle cx="50" cy="50" r="40" stroke="#006400" stroke-width="10"  stroke-dasharray="240" stroke-dashoffset="240" >
-                          <animateTransform 
-                            attributeName="transform"
-                            type="rotate" 
-                            from="0 50 50"
-                            to="360 50 50"  
-                            dur="2s"
-                            repeatCount="indefinite" />
-                        </circle>
-                        </svg>
+                    <svg width="100" height="100">
+                        <g>
+                          <circle cx="50" cy="50" r="40" stroke="#ddd" stroke-width="8" fill="none" />
+                          <circle cx="50" cy="50" r="40" stroke="#007bff" stroke-width="8" fill="none"
+                                  stroke-dasharray="125.6" stroke-dashoffset="125.6">
+                            <animate attributeName="stroke-dashoffset" values="125.6;0;125.6" dur="2s" repeatCount="indefinite" />
+                          </circle>
+                        </g>
+                      </svg>
                 </div>
                 
             </section>

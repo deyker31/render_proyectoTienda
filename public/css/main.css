@@ -10,10 +10,10 @@ body > div{
     overflow-x: hidden;
 }
 
-/*banner*/
+/*banner cargado*/
 
 #banner-carga {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,6 +25,17 @@ body > div{
     z-index: 9999;
   }
 
+ /*mensaje de producto agregado al carrito*/
+ #alert-agregarproducto {
+    transition: all 0.4s ease; 
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  
+  #alert-agregarproducto.fade-in {
+    transform: translateY(0px);  
+    opacity: 1;
+  }
 
 /*efecto overlay del menu hamburguesa*/
 #dropdown{
@@ -37,9 +48,12 @@ body > div{
     }
 }
 @media (max-width: 767px) {
-    .cambio-2 > section:not(.section-1),.cambio-2 > h3 {
+    .cambio-2 {
       filter: blur(3px) brightness(50%); 
       pointer-events: none;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
     }
 }
 .border-submenu{
@@ -223,6 +237,41 @@ header{
     display: block;
 }
 
+/*Media query pago productos*/
+
+@media (min-width: 644px) {
+    .td-carrito{
+        font-size: 16px;
+    }
+    .th-carrito{
+        font-size: 18px;
+    }
+}
+@media (min-width: 444px) and (max-width:643px) {
+    .td-carrito{
+        font-size: 10px;
+    }
+    .th-carrito{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 328px) and (max-width:443px) {
+    .td-carrito{
+        font-size: 8px;
+    }
+    .th-carrito{
+        font-size: 10px;
+    }
+}
+@media (min-width: 200px) and (max-width:327px) {
+    .td-carrito{
+        font-size: 6px;
+    }
+    .th-carrito{
+        font-size: 8px;
+    }
+}
 
 /*Imagen fondos*/
 
