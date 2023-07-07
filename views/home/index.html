@@ -30,8 +30,8 @@
         <header class="container cambio2">
 
             <!-- Alerta pago cancelado paypal-->
-        <section id="alerta-pagoexitoso" class="items-center px-4 pt-5 lg:px-20 fixed z-50 left-60 invisible">
-            <div class="w-full rounded-lg bg-green-200 px-4 ">
+        <section id="alerta-pagoexitoso" class="fixed top-10 left-0 w-full h-full flex items-start justify-center px-2 pt-2 md:pt-5 lg:px-20 z-50 invisible">
+            <div class="w-7/12 sm:w-full max-w-md rounded-lg bg-green-200 px-1 md:px-3 py-1 md:py-3">
               <div class="flex items-center justify-between px-6 py-4 mx-auto text-green-500 font-bold">
                 <div class="flex ">
                   <svg xmlns="http://www.w3.org/2000/svg" class="mr-4 icon icon-tabler icon-tabler-alert-triangle" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -41,8 +41,7 @@
                     <polyline points="11 12 12 12 12 16 13 16"></polyline>
                   </svg>
                   <div class="text-center">
-                  <p class="text-md font-semibold tracking-wide uppercase">Pago Realizado Exitosamente</p>
-                  <p class="text-md font-semibold tracking-wide capitalize">Gracias por su Compra!</p>
+                  <p class="text-md font-semibold tracking-wide uppercase">¡Su compra ha sido exitosa!</p>
                 </div>
                 </div>
                 <button class="p-1 transition-colors duration-200 transform rounded-md hover:bg-opacity-25 hover:bg-blueGray-600 focus:outline-none"  width="24" height="24" type="button" aria-label="Close" aria-hidden="true">
@@ -76,27 +75,33 @@
                     </div> 
                     <!-- Submenu -->
                     <div class="px-4 py-2 hover:bg-orange-500 border-submenu">
-                        <li class="flex items-center justify-center gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                              </svg>                              
-                            <a class="nav-a text-xl" href="/">INICIO</a>
+                        <li>                            
+                            <a class="nav-a text-xl flex items-center justify-center gap-1" href="/">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                  </svg>
+                                  <p>INICIO</p>
+                            </a>
                         </li>
                     </div>
                     <div class="px-4 py-2 hover:bg-orange-500 ">
-                        <li class="flex items-center justify-center gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                              </svg>                                
-                            <a class="nav-a text-xl" href="/gorras/">GORRAS</a>
+                        <li>                             
+                            <a class="nav-a text-xl flex items-center justify-center gap-1" href="/gorras/">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                  </svg>   
+                                <p>GORRAS</p>
+                            </a>
                         </li>
                     </div>
                     <div class="px-4 py-2 hover:bg-orange-500 border-submenu">
-                        <li class="flex items-center justify-center gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                              </svg>        
-                            <a class="nav-a text-xl" href="/contact/">CONTACTO</a>
+                        <li>       
+                            <a class="nav-a text-xl flex items-center justify-center gap-1" href="/contact/">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                  </svg> 
+                                <p>CONTACTO</p>
+                            </a>
                         </li>
                     </div>
                 </div>
@@ -230,8 +235,8 @@
                     <h4 class=" text-4xl text-orange-500 ">SUSCRIBETE</h4>
                     <P class="text-xl">Registrate Gratis. Unete A La Comunidad</P>
                     <div class="btn-membresia">
-                        <a href="/register"><button class="bg-white dark:bg-gray-200 rounded-lg p-2 text-black m-2 hover:bg-orange-500 dark:hover:bg-orange-600">Únete a Nosotros</button></a>
-                        <a href="/login"><button class="bg-white dark:bg-gray-200  rounded-lg p-2 text-black m-2 hover:bg-orange-500 dark:hover:bg-orange-600">Inicia Sesion</button></a>
+                        <a href="/register"><button class="font-bold bg-white dark:bg-gray-700 rounded-lg p-2 text-black dark:text-white m-2 hover:bg-orange-500 dark:hover:bg-orange-600  transition-colors duration-500 ease-in-out">Únete a Nosotros</button></a>
+                        <a href="/login"><button class="font-bold bg-white dark:bg-gray-700  rounded-lg p-2 text-black dark:text-white m-2 hover:bg-orange-500 dark:hover:bg-orange-600  transition-colors duration-500 ease-in-out">Inicia Sesion</button></a>
                     </div>
                 </div>
             </section>

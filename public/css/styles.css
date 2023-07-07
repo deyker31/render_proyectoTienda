@@ -639,20 +639,16 @@ video {
   left: 0px;
 }
 
-.left-60 {
-  left: 15rem;
-}
-
-.left-72 {
-  left: 18rem;
-}
-
 .right-0 {
   right: 0px;
 }
 
 .top-0 {
   top: 0px;
+}
+
+.top-10 {
+  top: 2.5rem;
 }
 
 .top-3 {
@@ -2548,11 +2544,6 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -2600,6 +2591,10 @@ video {
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .pt-20 {
@@ -3307,6 +3302,10 @@ video {
   transition-duration: 300ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .duration-700 {
   transition-duration: 700ms;
 }
@@ -3343,51 +3342,11 @@ body > div{
   min-height: 200px;
 }
 
-/*
-  body {
-    margin: 0;
-    padding: 0;
-    }
-    
-    header {
-    height: 80px;
-    }
-    
-    main {
-    padding-top: 20px;
-    }
-    
-    footer {
-    background-color: #f5f5f5;
-    color: #333;
-    padding: 0px;
-    flex-direction: column;
-    }
-    
-    @media (max-width: 767px) {
-    header {
-    height: 60px;
-    }
-    }
-    
-    @media (max-width: 479px) {
-    header {
-    height: 40px;
-    }
-    }
-    
-    .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    }
-    
-    .min-h-screen {
-    min-height: 100vh;
-    }
-    
-    .overflow-x-hidden {
-    overflow-x: hidden;
-    }*/
+/*carrito*/
+
+/* Desactivar el hover en pantallas táctiles */
+
+/*Responsive pago header*/
 
 .body-prue{
   display: flex;
@@ -3399,6 +3358,17 @@ body > div{
   flex: 1;
   /* Ocupa todo el espacio disponible*/
 }
+
+/*
+
+@media (min-width:768px) and (max-width:900px){
+    .main-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}*/
 
 @media (min-width:768px){
   .header-respon{
@@ -4154,11 +4124,6 @@ input[type=checkbox]:checked {
   background-color: rgb(147 197 253 / var(--tw-bg-opacity));
 }
 
-:is(.dark .dark\:bg-gray-200) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
 :is(.dark .dark\:bg-gray-600) {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
@@ -4206,11 +4171,6 @@ input[type=checkbox]:checked {
 :is(.dark .dark\:text-black) {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-:is(.dark .dark\:text-blue-500) {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:text-gray-100) {
@@ -4448,6 +4408,10 @@ input[type=checkbox]:checked {
     width: auto;
   }
 
+  .sm\:w-full {
+    width: 100%;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4492,6 +4456,11 @@ input[type=checkbox]:checked {
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .sm\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .sm\:px-6 {
@@ -4727,6 +4696,11 @@ input[type=checkbox]:checked {
     padding-right: 0.5rem;
   }
 
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .md\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -4740,6 +4714,15 @@ input[type=checkbox]:checked {
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .md\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .md\:pt-5 {
+    padding-top: 1.25rem;
   }
 
   .md\:text-left {

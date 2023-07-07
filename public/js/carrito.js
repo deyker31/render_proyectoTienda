@@ -8,6 +8,7 @@ const btnsDiv = document.querySelector('#div-carrito-compra')
 let btnPrecioTotal = document.querySelector('#precio-total span');
 let articulosCarrito = [];
 let precioTotal = 0;
+
 //Eventos
 
 cargarEventListeners();
@@ -20,7 +21,7 @@ function cargarEventListeners(){
     carrito.addEventListener('click',eliminarCurso)
 
     //agregar curso al presionar el btn en el carrito
-
+    
     carrito.addEventListener('click', sumarCurso)
 
     //
@@ -160,6 +161,7 @@ function crearCursosHTML(){
     articulosCarrito.forEach(curso=> {
         const row = document.createElement('tr');
         //row.style = 'class="px-5 md:px-10 mx-auto gap-2 md:gap-4"'
+        
       row.innerHTML =`
          <td>
           <img src ="${curso.imagen}" class="mx-auto w-10 sm:w-12 md:w-20 h-8 sm:h-10 md:h-16">
@@ -239,6 +241,7 @@ function eliminarCurso(e){
 function sumarCurso(e){
     e.preventDefault();
     
+
     if(e.target.classList.contains('sumar-curso')){
         const cursoId = e.target.getAttribute('data-id')
         const existe = articulosCarrito.filter(curso=>curso.id ===cursoId);
@@ -273,7 +276,7 @@ function sumarCurso(e){
             btnPrecioTotal.textContent = '$' + precioTotal.toFixed(2);
         }
     }
-
+    
 }
 
 //calculartotal

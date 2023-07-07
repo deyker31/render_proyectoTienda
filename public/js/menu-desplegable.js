@@ -18,4 +18,5 @@ menuBtn2.addEventListener('click', () => {
     document.querySelector('nav').classList.remove('cambio-1');
     document.querySelector('main').classList.remove('cambio-2');
     document.querySelector('footer').classList.remove('cambio-2');
+    
 }) 

@@ -33,7 +33,7 @@ function mostrarProductos(curso){
         tr.classList.add('dark:text-white','td-carrito')
         tr.innerHTML = `
             <td class="text-center px-0 md:px-2"><img src="${curso.imagen}" class="mx-auto w-7 sm:w-14 md:w-16 h-7 sm:h-14 md:h-16" alt="${curso.nombre}"></td>
-            <td class="text-center font-bold text-blue-600 dark:text-blue-500">${curso.nombre}</td>
+            <td class="text-center font-bold text-blue-600 dark:text-gray-200">${curso.nombre}</td>
             <td class="font-bold text-center px-0 sm:px-3 md:px-5">${curso.precio}</td>
             <td class="text-center">${curso.cantidad}</td>
         `
