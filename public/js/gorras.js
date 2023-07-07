@@ -113,6 +113,7 @@ function eventInput(bd){
 
 
 function eventInputColor(bd){
+    const bdPorDefecto = bd.slice();
     colorFilter.addEventListener('input', e=>{
         let element = e.target.value;
         if(element === "rojo"){
@@ -139,6 +140,8 @@ function eventInputColor(bd){
             filtrarRosado(bd);
         }else if(element === "azul"){
             filtrarAzul(bd);
+        }else{
+            mostrarHTML(bdPorDefecto);
         }         
     })
   
