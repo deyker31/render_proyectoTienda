@@ -5,22 +5,6 @@ const url = `${PAYPAL_API}/v2/checkout/orders`; // url orden paypal api
 
 //extraer precioTotal
 
-/*
-let data;
-
-async function fetchData() {
-  data = await getData();
-  //console.log(data);
-}
-
-async function getData() {
-  const urld = url2+'/apiServer/registros'; 
-  const respuesta = await fetch(urld);
-  const data = await respuesta.json();
-  return data;
-}
-
-fetchData();*/
 
 let data;
 
@@ -88,7 +72,6 @@ const createOrder = async (req, res) => {
     };
 
     const response = await axios.post(url, order, {
-      timeout: 8000,
       headers:{
         Authorization: `Bearer ${accessToken}`
     }
