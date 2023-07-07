@@ -72,6 +72,7 @@ const createOrder = async (req, res) => {
     };
 
     const response = await axios.post(url, order, {
+      timeout: 8000,
       headers:{
         Authorization: `Bearer ${accessToken}`
     }

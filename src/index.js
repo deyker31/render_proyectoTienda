@@ -1,6 +1,6 @@
 
+/*
 import express from 'express';
-import paymentRoutes from './routes/pago.js';
 import {PORT} from './config.js';
 
 const app = express();
@@ -18,4 +18,4 @@ app.use((req, res, next) => {
 //app.use(paymentRoutes);
 
 //app.listen(PORT)
-console.log('El servidor esta corriendo en el puerto', PORT); 
+console.log('El servidor esta corriendo en el puerto', PORT);  */
