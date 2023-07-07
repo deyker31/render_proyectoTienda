@@ -1568,10 +1568,6 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -4356,10 +4352,6 @@ input[type=checkbox]:checked {
     height: 4rem;
   }
 
-  .sm\:h-28 {
-    height: 7rem;
-  }
-
   .sm\:h-32 {
     height: 8rem;
   }
@@ -4394,10 +4386,6 @@ input[type=checkbox]:checked {
 
   .sm\:w-60 {
     width: 15rem;
-  }
-
-  .sm\:w-64 {
-    width: 16rem;
   }
 
   .sm\:w-9 {
@@ -4576,10 +4564,6 @@ input[type=checkbox]:checked {
     height: 5rem;
   }
 
-  .md\:h-32 {
-    height: 8rem;
-  }
-
   .md\:h-40 {
     height: 10rem;
   }
@@ -4594,10 +4578,6 @@ input[type=checkbox]:checked {
 
   .md\:w-10 {
     width: 2.5rem;
-  }
-
-  .md\:w-12 {
-    width: 3rem;
   }
 
   .md\:w-16 {
@@ -4671,10 +4651,6 @@ input[type=checkbox]:checked {
   .md\:bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  }
-
-  .md\:p-2 {
-    padding: 0.5rem;
   }
 
   .md\:p-5 {

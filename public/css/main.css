@@ -85,6 +85,8 @@ body > div{
     z-index: 9999;
   }
 
+
+
  /*mensaje de producto agregado al carrito*/
  #alert-agregarproducto {
     z-index: 9999;

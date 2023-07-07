@@ -48,6 +48,7 @@ function metodoDePago(){
 
     botonPaypal.addEventListener('click', async (e)=>{
         e.preventDefault();
+
         const respuesta = await fetch(url,{
             method:'POST',
         })
