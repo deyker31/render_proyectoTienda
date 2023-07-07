@@ -7,6 +7,16 @@ const selectGorras = document.querySelector('#select-filter');
 const colorFilter = document.querySelector('#color-filter');
 const fragment = document.createDocumentFragment();
 
+//Div cargando ..
+const divCargando = document.createElement('div')
+    divCargando.classList.add('grid','col-span-4','items-center','justify-center')
+    divCargando.innerHTML =
+    `
+    <p class="my-32 text-gray-800 dark:text-gray-200">Cargando ...</p>
+    `
+contenedor.appendChild(divCargando)
+
+//Alamacenar evento en un objeto 
 const infoGorras = {
     id: '',
     nombre: '',
@@ -17,19 +27,14 @@ const infoGorras = {
     color:''
 }
 
+//cuando cargue el window , entonces mostrar quitar banner
 window.addEventListener('load', function(){
-    const div = document.createElement('div')
-    div.classList.add('grid','col-span-4','items-center','justify-center')
-    div.innerHTML =
-    `
-    <p class="my-32 text-gray-800 dark:text-gray-200">Cargando ...</p>
-    `
-    contenedor.appendChild(div)
+    
     const bannerCarga = document.getElementById('banner-carga');
     //quitar banner despues de 0.5 segundos
     setTimeout(()=>{
         bannerCarga.style.display = 'none';
-        div.remove();
+        divCargando.remove();
     }, 500)
     
 });
