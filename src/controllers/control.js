@@ -5,7 +5,7 @@ const url = `${PAYPAL_API}/v2/checkout/orders`; // url orden paypal api
 
 //extraer precioTotal
 
-
+/*
 let data;
 
 async function fetchData() {
@@ -19,7 +19,7 @@ async function getData() {
   return respuesta.data;
 }
 
-fetchData();
+fetchData(); */
 
 
 //AccesToken
@@ -58,7 +58,7 @@ const createOrder = async (req, res) => {
             {
                 amount: {
                     currency_code: "USD",
-                    value: data[0].precioTotal2
+                    value: "25.50"//data[0].precioTotal2
                 },
             },
         ],
