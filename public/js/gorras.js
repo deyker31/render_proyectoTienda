@@ -18,11 +18,18 @@ const infoGorras = {
 }
 
 window.addEventListener('load', function(){
-    contenedor.innerHTML = `<p class="my-32 grid col-span-4 items-center justify-center text-gray-800 dark:text-gray-200">Cargando ...</p>`
+    const div = document.createElement('div')
+    div.classList.add('grid','col-span-4','items-center','justify-center')
+    div.innerHTML =
+    `
+    <p class="my-32 text-gray-800 dark:text-gray-200">Cargando ...</p>
+    `
+    contenedor.appendChild(div)
     const bannerCarga = document.getElementById('banner-carga');
     //quitar banner despues de 0.5 segundos
     setTimeout(()=>{
         bannerCarga.style.display = 'none';
+        div.remove();
     }, 500)
     
 });
