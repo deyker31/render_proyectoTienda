@@ -52,6 +52,7 @@ function metodoDePago(){
         const respuesta = await fetch(url,{
             method:'POST',
         })
+        console.log(respuesta);
         const data = await respuesta.json();
         console.log(data)
         window.location.href = data.links[1].href
