@@ -18,6 +18,7 @@ const infoGorras = {
 }
 
 window.addEventListener('load', function(){
+    contenedor.innerHTML = `<p class="my-32 grid col-span-4 items-center justify-center text-gray-800 dark:text-gray-200">Cargando ...</p>`
     const bannerCarga = document.getElementById('banner-carga');
     //quitar banner despues de 0.5 segundos
     setTimeout(()=>{
@@ -37,8 +38,7 @@ function bdJson(){
         
         mostrarHTML(data);
         eventInput(data);
-        eventCheckBox(data);
-        noSeleccion(data);
+        eventInputColor(data);
     })();
 }
 
@@ -105,14 +105,36 @@ function eventInput(bd){
 }
 
 
-function eventCheckBox(bd){
+function eventInputColor(bd){
     colorFilter.addEventListener('input', e=>{
         let element = e.target.value;
-        if(infoGorras.color = element){
-            filtrarColor(bd);
-        }  
+        if(element === "rojo"){
+            filtrarRojo(bd);
+        }else if(element === "amarillo"){
+            filtrarAmarillo(bd);
+        }else if(element === "verde"){
+            filtrarVerde(bd);
+        }else if(element === "marron"){
+            filtrarMarron(bd);
+        }else if(element === "celeste"){
+            filtrarCeleste(bd);
+        }else if(element === "blanco"){
+            filtrarBlanco(bd);
+        }else if(element === "negro"){
+            filtrarNegro(bd);
+        }else if(element === "gris"){
+            filtrarGris(bd);
+        }else if(element === "naranja"){
+            filtrarNaranja(bd);
+        }else if(element === "morado"){
+            filtrarMorado(bd);
+        }else if(element === "rosado"){
+            filtrarRosado(bd);
+        }else if(element === "azul"){
+            filtrarAzul(bd);
+        }         
     })
-    
+  
 } 
 
 
@@ -160,56 +182,103 @@ function filtrarMarcaZA(bd){
 
 //funciones de filtrado por checkbox (color)
 
-function filtrarColor(bd){
-    const bdPorDefecto = bd.slice();
-    const todos = document.querySelector('#todos-checkbox').value
-    const resultado = bd.filter(filtrarColores);
-    console.log(resultado.length + 'aqui')
-    if(resultado.length){ 
-        mostrarHTML(resultado);
-    }else if(todos === 'todos'){
-        mostrarHTML(bdPorDefecto);
-    }
+function filtrarRojo(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "rojo");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
+}    
+function filtrarAmarillo(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "amarillo");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
+} 
+function filtrarVerde(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "verde");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
 }
-
-function filtrarColores(color){
-    if(color.color){
-        return color.color === infoGorras.color;
-    }
-    return color
+function filtrarMarron(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "marron");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
 }
-
-//obligar a que se seleccione un solo checkbox
-
-let checked;
-
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', e => {
-        if(e.target.checked) {
-        checked = e.target;
-        }
-    });
-    });
-   
-    
-    noSeleccion();
-
-
-function noSeleccion(bd){
-    document.addEventListener('click', e => {
-
-        if(checked) {
-            checked.checked = false;
-            //checked = null;
-            mostrarHTML(bd);  
-        }
-    });
+function filtrarCeleste(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "celeste");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
+}   
+  
+function filtrarBlanco(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "blanco");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
+} 
+function filtrarNegro(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "negro");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
+} 
+function filtrarGris(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "gris");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
+}  
+function filtrarNaranja(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "naranja");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
+}   
+function filtrarMorado(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "morado");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
+} 
+function filtrarRosado(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "rosado");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
 }
-    
-   
-
+function filtrarAzul(bd){
+    const bdNuevo = bd.filter(bd => bd.color === "azul");
+    if(bdNuevo.length == 0){
+        noExiste();
+    }else{
+        mostrarHTML(bdNuevo);
+    }   
+}    
 
 
 
@@ -219,4 +288,22 @@ function limpiarHTML(){
     while (contenedor.firstChild) {
         contenedor.removeChild(contenedor.firstChild)
     }
+}
+
+//funcion no existe producto
+
+function noExiste(){
+    limpiarHTML();
+    const div = document.createElement('div');
+    div.classList.add('mx-auto','p-1','grid','lg:col-span-4','md:col-span-3','sm:col-span-2', 'col-start-1')
+    div.innerHTML =
+    `
+    <p class="text-lg md:text-3xl text-center uppercase sm:px-5 sm:py-7 my-10 rounded-md text-gray-500 dark:text-gray-100">
+    <span class="text-red-600">¡</span>
+    Color seleccionado no existe
+    <span class="text-red-600">!</span>
+    </p>
+    
+    `
+    contenedor.appendChild(div);
 }
