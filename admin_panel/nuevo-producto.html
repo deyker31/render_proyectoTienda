@@ -34,17 +34,17 @@
                         <div id="alerta-error" class="absolute ml-32">
 
                         </div>
-                        <form id="formulario" class="bg-white p-3 dark:bg-gray-700" method="post">
+                        <form id="formulario" class="bg-white p-3 dark:bg-gray-700" method="post" enctype="multipart/form-data">
                             <div class="mb-4">
                                 <label class="block text-orange-500 dark:text-orange-400 text-sm font-bold mb-2" for="nombre">Nombre</label>
                                 <input
-                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    required  class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     id="nombre" name="nombre" type="text" placeholder="Nombre Producto" />
                             </div>
                             <div class="mb-4">
                                 <label class="block text-orange-500 dark:text-orange-400 text-sm font-bold mb-2" for="email">Precio</label>
                                 <input
-                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    required class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     id="precio" name="precio" type="precio" placeholder="Precio Producto" />
                             </div>
 
@@ -52,31 +52,30 @@
                                 <label class="block text-orange-500 dark:text-orange-400 text-sm font-bold mb-2"
                                     for="marca">Marca</label>
                                 <input
-                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    required class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     id="marca" name="marca" type="text" placeholder="Marca" />
                             </div>
                             <div class="mb-4">
                                 <label class="block text-orange-500 dark:text-orange-400 text-sm font-bold mb-2"
                                     for="tipo">Tipo</label>
                                 <input
-                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    required class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     id="tipo" name="tipo" type="text" placeholder="Tipo" />
                             </div>
                             <div class="mb-4">
                                 <label class="block text-orange-500 dark:text-orange-400 text-sm font-bold mb-2"
                                     for="telefono">Color</label>
                                 <input
-                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    required class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     id="color" name="color" type="text" placeholder="Colores Aceptables: blanco-negro-rojo-celeste-marron-gris-verde-azul" />
                             </div>
                             <div class="mb-4">
                                 <label class="block text-orange-500 dark:text-orange-400 text-sm font-bold mb-2"
                                     for="telefono">Imagen</label>
                                 <input
-                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="imagen" name="img" type="text" placeholder="Formato Ejemplo: img.png" />
+                                    required class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="imagen" name="imagen" type="file" placeholder="Formato Ejemplo: img.png" />
                             </div>
-
                             <input type="submit"
                                 class="btn-submit bg-orange-500 dark:bg-orange-600 hover:bg-blue-700 dark:hover:bg-blue-500 w-full mt-5 p-2 text-white uppercase font-bold"
                                 value="Agregar Producto" />

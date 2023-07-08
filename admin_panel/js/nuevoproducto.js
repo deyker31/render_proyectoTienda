@@ -9,12 +9,17 @@ formulario.addEventListener('submit', validarProducto);
 async function validarProducto(e) {
     e.preventDefault();
 
+    
+
     const nombre = document.querySelector('#nombre').value;
     const precio = document.querySelector('#precio').value;
     const marca = document.querySelector('#marca').value;
     const tipo = document.querySelector('#tipo').value;
-    const imagen = document.querySelector('#imagen').value;
     const color = document.querySelector('#color').value;
+    const imagen = document.querySelector('#imagen');
+    const imagenFile = imagen.files[0]; // obtener el archivo seleccionado
+    const imagenNombre = imagenFile.name; // obtener el nombre del archivo
+    
     
     const producto = {
         nombre,
@@ -22,7 +27,7 @@ async function validarProducto(e) {
         marca,
         tipo,
         color,
-        imagen: `/recursos/img/products/${imagen}` 
+        imagen: `/recursos/img/products/${imagenNombre}` 
     }
     console.log(producto);
     if (validar(producto)) {
@@ -34,6 +39,22 @@ async function validarProducto(e) {
     //enviar datos a funcion nuevoProducto
     await nuevoProducto(producto);
     alert('Producto agregado exitosamente ✅');
+    //enviar imagen a la carpeta
+    const formData = new FormData(formulario); // crear objeto FormData
+
+    fetch('/admin_productos', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+        console.log(data);
+        // hacer algo con la respuesta del servidor
+        })
+        .catch(error => {
+        console.error(error+"hola");
+        // manejar el error
+        });
     window.location.href = '/admin_productos'
 }
 
@@ -62,3 +83,4 @@ function mostrarAlerta(mensaje) {
 }   
 
 })();
+

@@ -95,8 +95,30 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
+///
+//enviar imagen con multer
+///
 
-//require('./models/gorras.js');
+
+const multer  = require('multer');
+const mimeTypes = require('mime-types');
+
+const storage = multer.diskStorage({
+  destination: 'public/img/products/',
+  filename: function (req, file, cb) {
+    //cb("",Date.now() + "." + mimeTypes.extension(file.mimetype));
+    cb(null, file.originalname)
+  }
+});
+
+const upload = multer({ storage: storage });
+
+
+app.post('/admin_productos', upload.single('imagen'), function (req, res, next) {
+  // req.file es el `image` file
+  // req.body contendrá el texto de los campos, si los hubiera
+});
+
 
 //rutas FRONTEND
 
