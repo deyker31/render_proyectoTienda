@@ -11,53 +11,51 @@
 
 <body class="min-h-100 bg-gray-200">
     <div class="md:flex flex-col min-h-screen md:align-top">
-        <aside class=" w-full bg-blue-600 px-5 py-10 text-center">
-            <a href="/"><img src="/recursos/img/logo/logo-admin.svg" alt="Logo cerrar sesion" class="hover:bg-blue-500 p-2"></a>
+        <aside class=" w-full bg-blue-600 px-5 py-10 text-center shadow-lg dark:bg-gray-800 dark:border-b-2">
+            <a href="/"><img src="/recursos/img/logo/logo-admin.svg" alt="Logo cerrar sesion" class="hover:bg-blue-500 dark:hover:bg-orange-400 dark:bg-orange-500 rounded-md p-2"></a>
             <div class="flex items-center justify-center my-auto">
                 <h1 class="text-white tracking-wide text-4xl text-center font-bold mt-2">CapStyle</h1>
                 <img src="/recursos/img/logo/Logo 3.png" alt="Logo CapStyle" width="70" height="40">
             </div>
-            <p class="mt-10 text-black font-bold text-xl">Administra tus Productos</p>
+            <p class="mt-10 text-black dark:text-white font-bold text-xl">Administra tus Productos</p>
             <nav class="mt-8">
                 <a href="/"
-                    class="px-3 py-1 text-white block text-2xl hover:bg-orange-500 bg-red-500 rounded">Productos</a>
+                    class="px-3 py-1 text-white dark:text-gray-100 block text-2xl hover:bg-orange-500 dark:hover:bg-slate-600 bg-red-500 dark:bg-gray-700 rounded">Productos</a>
                 <a href="/admin_productos/nuevoproducto"
-                    class="px-3 py-1 text-white block text-2xl hover:bg-orange-500 mt-2 rounded">Nuevo Producto</a>
+                    class="px-3 py-1 text-white dark:text-gray-100 block text-2xl hover:bg-orange-500 dark:hover:bg-slate-600 mt-2 rounded">Nuevo Producto</a>
             </nav>
         </aside> <!--sidebar-->
-        <main class="w-full px-5 py-10 bg-gray-200">
+        <main class="w-full px-5 py-10 bg-gray-200 dark:bg-gray-800">
 
 
-
-
-            <h2 class="text-3xl font-bold text-center">Productos</h2>
+            <h2 class="text-3xl font-bold text-center text-black dark:text-white">Productos</h2>
 
             <div class="flex flex-col mt-10">
                 <div class="py-2 overflow-x-auto">
                     <div
-                        class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+                        class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200 dark:border-gray-700">
                         <table class="min-w-full">
-                            <thead class="bg-gray-100 ">
+                            <thead class="bg-gray-100 dark:bg-gray-700">
                                 <tr>
                                     <th
-                                        class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-orange-600 uppercase tracking-wider">
+                                        class="px-6 py-3 border-b border-gray-200 dark:border-gray-700 text-left text-xs leading-4 font-medium text-orange-600 dark:text-orange-500 uppercase tracking-wider">
                                         Nombre Del Producto
                                     </th>
                                     <th
-                                        class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-orange-600 uppercase tracking-wider">
+                                        class="px-6 py-3 border-b border-gray-200 dark:border-gray-700 text-left text-xs leading-4 font-medium text-orange-600 dark:text-orange-500  uppercase tracking-wider">
                                         Precio
                                     </th>
                                     <th
-                                        class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-orange-600 uppercase tracking-wider">
+                                        class="px-6 py-3 border-b border-gray-200 dark:border-gray-700 text-left text-xs leading-4 font-medium text-orange-600 dark:text-orange-500  uppercase tracking-wider">
                                         Marca - Tipo
                                     </th>
                                     <th
-                                        class="px-6 py-3 border-b border-gray-200  text-left text-xs leading-4 font-medium text-orange-600 uppercase tracking-wider">
+                                        class="px-6 py-3 border-b border-gray-200 dark:border-gray-700 text-left text-xs leading-4 font-medium text-orange-600 dark:text-orange-500  uppercase tracking-wider">
                                         Acciones
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody id="listado-Productos" class="bg-white"></tbody>
+                            <tbody id="listado-Productos" class="bg-white dark:bg-gray-800"></tbody>
                         </table>
                     </div>
                 </div>
@@ -66,6 +64,7 @@
     </div>
     <script src="js/app.js" type="module"></script>
     <script src="js/api.js" type="module"></script>
+    <script src="/recursos/js/colorDarkMode.js"></script>
 </body>
 
 </html>

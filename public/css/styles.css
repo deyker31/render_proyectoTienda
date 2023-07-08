@@ -951,10 +951,6 @@ video {
   margin-top: 2rem;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -2499,6 +2495,10 @@ video {
   padding: 1.5rem;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -2577,11 +2577,6 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.py-32 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
 }
 
 .pb-1 {
@@ -2967,11 +2962,6 @@ video {
   color: rgb(113 113 122 / var(--tw-text-opacity));
 }
 
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -3173,6 +3163,12 @@ video {
 .shadow-inner {
   --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -4095,6 +4091,10 @@ input[type=checkbox]:checked {
   color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
+:is(.dark .dark\:border-b-2) {
+  border-bottom-width: 2px;
+}
+
 :is(.dark .dark\:border-gray-600) {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
@@ -4150,6 +4150,11 @@ input[type=checkbox]:checked {
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
+:is(.dark .dark\:bg-orange-600) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+}
+
 :is(.dark .dark\:font-bold) {
   font-weight: 700;
 }
@@ -4169,6 +4174,11 @@ input[type=checkbox]:checked {
   color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
+:is(.dark .dark\:text-gray-300) {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 :is(.dark .dark\:text-gray-400) {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -4184,9 +4194,19 @@ input[type=checkbox]:checked {
   color: rgb(249 115 22 / var(--tw-text-opacity));
 }
 
+:is(.dark .dark\:text-red-500) {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 :is(.dark .dark\:text-slate-300) {
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:text-teal-500) {
+  --tw-text-opacity: 1;
+  color: rgb(20 184 166 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:text-white) {
@@ -4202,11 +4222,6 @@ input[type=checkbox]:checked {
 :is(.dark .dark\:text-zinc-400) {
   --tw-text-opacity: 1;
   color: rgb(161 161 170 / var(--tw-text-opacity));
-}
-
-:is(.dark .dark\:text-gray-300) {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:hover\:rounded-md:hover) {
@@ -4243,9 +4258,19 @@ input[type=checkbox]:checked {
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
+:is(.dark .dark\:hover\:bg-orange-400:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+}
+
 :is(.dark .dark\:hover\:bg-orange-600:hover) {
   --tw-bg-opacity: 1;
   background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:hover\:bg-slate-600:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
 :is(.dark .dark\:hover\:bg-yellow-400:hover) {
@@ -4253,9 +4278,44 @@ input[type=checkbox]:checked {
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 
+:is(.dark .dark\:hover\:bg-orange-700:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(194 65 12 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:hover\:bg-orange-500:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:hover\:bg-blue-500:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:hover\:bg-zinc-700:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(63 63 70 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:hover\:bg-zinc-600:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
+}
+
 :is(.dark .dark\:hover\:text-orange-500:hover) {
   --tw-text-opacity: 1;
   color: rgb(249 115 22 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:hover\:text-red-600:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:hover\:text-teal-600:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(13 148 136 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:focus\:border-blue-500:focus) {
