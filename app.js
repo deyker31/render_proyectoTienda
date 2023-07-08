@@ -99,7 +99,6 @@ app.post('/api/login', async (req, res) => {
 //enviar imagen con multer
 ///
 
-
 const multer  = require('multer');
 const mimeTypes = require('mime-types');
 
