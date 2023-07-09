@@ -6,7 +6,6 @@ const precioInput = document.querySelector('#precio');
 const marcaInput = document.querySelector('#marca');
 const tipoInput = document.querySelector('#tipo');
 const idInput = document.querySelector('#id');
-const imagenInput = document.querySelector('#imagen').files[0];
 let imagenName
 const colorInput = document.querySelector('#color');
 
@@ -43,6 +42,7 @@ function mostrarProducto(producto) {
 
 async function validarProducto(e) {
     e.preventDefault();
+    const imagenInput = document.querySelector('#imagen').files[0];
     const urlImagen = `https://firebasestorage.googleapis.com/v0/b/imagenes-capstyle.appspot.com/o/${imagenInput}?alt=media`;
     console.log(imagenName);
     console.log(imagenInput);
