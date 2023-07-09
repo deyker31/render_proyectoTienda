@@ -12,6 +12,7 @@ async function setProductImage(copia , urlImagen) {
     //enviar datos a funcion nuevoProducto
     await nuevoProducto(copia);
     window.location.href = '/admin_productos'
+    alert('Producto agregado exitosamente ✅');
   }
 
 async function validarProducto(e) {
@@ -22,6 +23,7 @@ async function validarProducto(e) {
     const marca = document.querySelector('#marca').value;
     const tipo = document.querySelector('#tipo').value;
     const color = document.querySelector('#color').value; 
+    const imagen = document.querySelector('#imagen').value; 
     
     const producto = {
         nombre,
@@ -29,7 +31,7 @@ async function validarProducto(e) {
         marca,
         tipo,
         color,
-        imagen: "h" 
+        imagen
     }
     console.log(producto);
     if (validar(producto)) {

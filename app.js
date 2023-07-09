@@ -143,7 +143,19 @@ app.post('/admin_productos', upload.single('imagen'), function (req, res, next) 
   blobStream.end(req.file.buffer);
 });
 
+///eliminar imagen de firebase
 
+app.post("/delete-imagen", (req, res) => {
+  const { imagenName } = req.body;
+ 
+  const file = bucket.file(imagenName); 
+  file.delete().then(() => {
+    res.send("Image deleted");
+  }).catch(err => {
+    console.error(err);
+    res.status(500).send("Error deleting image");
+  });
+})
 
 
 

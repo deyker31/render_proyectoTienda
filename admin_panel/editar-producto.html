@@ -74,12 +74,14 @@
                                     id="color" name="color" type="text" placeholder="Colores Aceptables: blanco-negro-rojo-celeste-marron-gris-verde-azul" />
                             </div>
                             <div class="mb-4">
-                                <label class="block text-orange-500 dark:text-orange-400 text-sm font-bold mb-2"
-                                    for="telefono">Imagen</label>
-                                <input
-                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="imagen" name="img" type="text" placeholder="Formato Ejemplo: img.png" />
-                            </div>
+                                <label class="block text-orange-500 dark:text-orange-400 text-sm font-bold mb-2" for="imagen">Imagen</label>
+                                <div class="relative w-full max-w-md">
+                                    <input required class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="imagen" name="imagen" type="file" placeholder="Formato Ejemplo: img.png" />
+                                    <label for="imagen" id="imagen-label" class="absolute inset-0 flex items-center justify-center border-2 border-gray-300 rounded-md bg-white text-gray-500 cursor-pointer hover:bg-gray-100">
+                                        Arrastra aquí o selecciona un archivo
+                                    </label>
+                                </div>
+                            </div> 
 
                             <input type="hidden" name="id" id="id" value="">
                             

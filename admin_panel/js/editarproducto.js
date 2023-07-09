@@ -14,14 +14,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     const parametrosURL = new URLSearchParams(window.location.search);
     const idProducto = parametrosURL.get('id');
     console.log(idProducto);
+
     const producto = await obtenerProducto(idProducto);
+    console.log(producto);
     
-    mostrarProducto(producto);
+    //mostrarProducto(producto);
 
     //ahora vamos a registrar en el formulario
 
-    const formulario = document.querySelector('#formulario');
-    formulario.addEventListener('submit', validarProducto);
+    //const formulario = document.querySelector('#formulario');
+    //formulario.addEventListener('submit', validarProducto);
 })
 
 function mostrarProducto(producto) {
@@ -32,7 +34,7 @@ function mostrarProducto(producto) {
     precioInput.value = precio;
     marcaInput.value = marca;
     tipoInput.value = tipo;
-    imagenInput.value = imagen;
+    //imagenInput.value = imagen;
     colorInput.value = color;
     idInput.value = _id;
 }
@@ -45,7 +47,7 @@ async function validarProducto(e) {
         marca: marcaInput.value,
         tipo: tipoInput.value,
         color: colorInput.value,
-        imagen: imagenInput.value,
+        //imagen: imagenInput.value,
         id: idInput.value
     }
     
