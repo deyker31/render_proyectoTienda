@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     const producto = await obtenerProducto(idProducto);
     console.log(producto);
     
-    //mostrarProducto(producto);
+    mostrarProducto(producto);
 
     //ahora vamos a registrar en el formulario
 
-    //const formulario = document.querySelector('#formulario');
-    //formulario.addEventListener('submit', validarProducto);
+    const formulario = document.querySelector('#formulario');
+    formulario.addEventListener('submit', validarProducto);
 })
 
 function mostrarProducto(producto) {
