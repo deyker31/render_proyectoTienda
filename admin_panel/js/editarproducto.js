@@ -30,7 +30,8 @@ function mostrarProducto(producto) {
     
     const {  nombre, precio, marca, tipo, color, imagen, _id } = producto;
 
-    imagenName = imagen.split("/").pop().split("?")[0];
+    //imagenName = imagen.split("/").pop().split("?")[0];
+    imagenName = imagen;
     nombreInput.value = nombre;
     precioInput.value = precio;
     marcaInput.value = marca;
@@ -60,11 +61,11 @@ async function validarProducto(e) {
         mostrarAlerta('Todos los campos son obligatorios');
         return;
     }
-    fetch("/update-imagen", {
-        method: "POST",
-        body: JSON.stringify({
-          imagenName,  
-          imagenInput 
+    fetch("/update-image", {
+        method: "POST",  
+        body: JSON.stringify({ 
+          currentImage: imagenName, 
+          newImage: imagenInput  
         })
       })
     //await editarProducto(producto.id, producto);

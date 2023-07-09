@@ -314,30 +314,24 @@ app.put('/apiGorras/:id', (req, res) => {
     });
 });
 
-//Actualizar imagen de firebase
-app.post("/update-imagen", async (req, res) => {
-  try {
-    const { imagenName, imagenInput } = req.body;
-    
-    const file = bucket.file(imagenName);
-    
-    const downloadUrl = await file.getPublicUrl();
-    
-    const response = await axios({
-      method: 'PUT',
-      url: downloadUrl ,    
-      data: imagenInput
-    });
-      
-    await file.updateMetadata({
-      contentType: 'image/jpeg'  
-    });
-      
-    res.send("Image updated successfully!");    
-  } catch(err) {
-    console.error(err);
-    res.status(500).send("Error updating image");   
-  } 
+//actualizar imagen de firebase
+app.post("/update-image", async (req, res) => {
+  const { currentImageUrl, newImage } = req.body;
+  
+  const file = bucket.file(currentImageUrl);
+  
+  const downloadUrl = file.publicUrl();  
+  
+  await fetch(downloadUrl, {
+    method: 'PUT', 
+    body: newImage
+  });  
+  
+  await file.updateMetadata({
+    contentType: newImage.type  
+  });
+
+  res.send("Image updated!");
 })
 
 
