@@ -45,7 +45,8 @@ async function validarProducto(e) {
     const imagenInput = document.querySelector('#imagen').files[0];
     const urlImagen = `https://firebasestorage.googleapis.com/v0/b/imagenes-capstyle.appspot.com/o/${imagenInput}?alt=media`;
     console.log(imagenName);
-    console.log(imagenInput);
+    console.log(imagenInput.name);
+    console.log(imagenInput.type);
     const producto = {
         nombre: nombreInput.value,
         precio: precioInput.value,
@@ -67,9 +68,9 @@ async function validarProducto(e) {
           imagenInput 
         })
       })
-    await editarProducto(producto.id, producto);
+    //await editarProducto(producto.id, producto);
     alert('Producto editado exitosamente ✅')
-    window.location.href = '/admin_productos';
+    //window.location.href = '/admin_productos';
 
 }
 
