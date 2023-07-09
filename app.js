@@ -101,22 +101,51 @@ app.post('/api/login', async (req, res) => {
 
 const multer  = require('multer');
 const mimeTypes = require('mime-types');
+const admin = require("firebase-admin");
+// Configurar Firebase
+var serviceAccount = require("./imagenes.json");
 
-const storage = multer.diskStorage({
-  destination: 'public/img/products/',
-  filename: function (req, file, cb) {
-    //cb("",Date.now() + "." + mimeTypes.extension(file.mimetype));
-    cb(null, file.originalname)
-  }
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  storageBucket: "gs://imagenes-capstyle.appspot.com"
 });
 
+var bucket = admin.storage().bucket();
+
+// Configurar Multer
+const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-
 app.post('/admin_productos', upload.single('imagen'), function (req, res, next) {
-  // req.file es el `image` file
-  // req.body contendrá el texto de los campos, si los hubiera
+  // req.file es el `imagen` file
+
+  if (!req.file) {
+    res.status(400).send('No file submitted');
+    return;
+  }
+
+  // Crear un nuevo blob en el bucket y subir el archivo
+  var blob = bucket.file(req.file.originalname);
+  var blobStream = blob.createWriteStream();
+  const url = blob.publicUrl();
+  
+  
+  blobStream.on('error', (err) => {
+    next(err);
+  });
+
+  blobStream.on('finish', () => {
+    // El archivo se subió correctamente
+    res.status(200).json({ url });
+  });
+
+  // Cuando no hay más datos para subir, cierra el stream
+  blobStream.end(req.file.buffer);
 });
+
+
+
+
 
 
 //rutas FRONTEND

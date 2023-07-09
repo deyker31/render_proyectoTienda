@@ -6,20 +6,22 @@ const formulario = document.querySelector('#formulario');
 
 formulario.addEventListener('submit', validarProducto);
 
+async function setProductImage(copia , urlImagen) {
+    copia.imagen = urlImagen; 
+    console.log(copia)  
+    //enviar datos a funcion nuevoProducto
+    await nuevoProducto(copia);
+    window.location.href = '/admin_productos'
+  }
+
 async function validarProducto(e) {
     e.preventDefault();
-
-    
 
     const nombre = document.querySelector('#nombre').value;
     const precio = document.querySelector('#precio').value;
     const marca = document.querySelector('#marca').value;
     const tipo = document.querySelector('#tipo').value;
-    const color = document.querySelector('#color').value;
-    const imagen = document.querySelector('#imagen');
-    const imagenFile = imagen.files[0]; // obtener el archivo seleccionado
-    const imagenNombre = imagenFile.name; // obtener el nombre del archivo
-    
+    const color = document.querySelector('#color').value; 
     
     const producto = {
         nombre,
@@ -27,7 +29,7 @@ async function validarProducto(e) {
         marca,
         tipo,
         color,
-        imagen: `/recursos/img/products/${imagenNombre}` 
+        imagen: "h" 
     }
     console.log(producto);
     if (validar(producto)) {
@@ -36,9 +38,6 @@ async function validarProducto(e) {
         mostrarAlerta('Todos los campos son obligatorios');
         return;
     }
-    //enviar datos a funcion nuevoProducto
-    await nuevoProducto(producto);
-    alert('Producto agregado exitosamente ✅');
     //enviar imagen a la carpeta
     const formData = new FormData(formulario); // crear objeto FormData
 
@@ -46,16 +45,19 @@ async function validarProducto(e) {
         method: 'POST',
         body: formData
     })
-        .then(response => response.json())
-        .then(data => {
-        console.log(data);
-        // hacer algo con la respuesta del servidor
+    .then(response  => response.json())
+        .then(({ url })  => {
+            const texto = url;
+            const partes = texto.split("/");
+            const nombre_imagen = partes[partes.length - 1];
+            const urlImagen = `https://firebasestorage.googleapis.com/v0/b/imagenes-capstyle.appspot.com/o/${nombre_imagen}?alt=media`;
+            const copia = Object.assign({}, producto);
+            setProductImage(copia , urlImagen);
         })
         .catch(error => {
-        console.error(error+"hola");
-        // manejar el error
+            console.error(error);
+            // manejar el error
         });
-    window.location.href = '/admin_productos'
 }
 
 function validar(producto) {
