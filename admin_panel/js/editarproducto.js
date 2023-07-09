@@ -6,7 +6,7 @@ const precioInput = document.querySelector('#precio');
 const marcaInput = document.querySelector('#marca');
 const tipoInput = document.querySelector('#tipo');
 const idInput = document.querySelector('#id');
-const imagenInput = document.querySelector('#imagen');
+const imagenInput = document.querySelector('#imagen').files[0];
 let imagenName
 const colorInput = document.querySelector('#color');
 
@@ -32,7 +32,6 @@ function mostrarProducto(producto) {
     const {  nombre, precio, marca, tipo, color, imagen, _id } = producto;
 
     imagenName = imagen.split("/").pop().split("?")[0];
-    console.log(imagenName);
     nombreInput.value = nombre;
     precioInput.value = precio;
     marcaInput.value = marca;
@@ -44,21 +43,30 @@ function mostrarProducto(producto) {
 
 async function validarProducto(e) {
     e.preventDefault();
+    const urlImagen = `https://firebasestorage.googleapis.com/v0/b/imagenes-capstyle.appspot.com/o/${imagenInput}?alt=media`;
+    console.log(imagenName);
+    console.log(imagenInput);
     const producto = {
         nombre: nombreInput.value,
         precio: precioInput.value,
         marca: marcaInput.value,
         tipo: tipoInput.value,
         color: colorInput.value,
-        //imagen: imagenInput.value,
+        imagen: `${urlImagen}`,
         id: idInput.value
     }
-    
+    console.log(producto.imagen)
     if (validar(producto)) {
         mostrarAlerta('Todos los campos son obligatorios');
         return;
     }
-   
+    fetch("/update-imagen", {
+        method: "POST",
+        body: JSON.stringify({
+          imagenName,  
+          imagenInput 
+        })
+      })
     await editarProducto(producto.id, producto);
     alert('Producto editado exitosamente ✅')
     window.location.href = '/admin_productos';
