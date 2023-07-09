@@ -63,13 +63,14 @@ async function validarProducto(e) {
         mostrarAlerta('Todos los campos son obligatorios');
         return;
     }
+    /*
     fetch("/update-image", {
         method: "POST",  
         body: JSON.stringify({ 
           filename, 
           imagenInput  
         })
-      })
+      })*/
     //await editarProducto(producto.id, producto);
     alert('Producto editado exitosamente ✅')
     //window.location.href = '/admin_productos';

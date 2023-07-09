@@ -315,6 +315,7 @@ app.put('/apiGorras/:id', (req, res) => {
 });
 
 //actualizar imagen de firebase
+/*
 app.post("/update-image", async (req, res) => {
   const { filename, imagenInput } = req.body;
   
@@ -332,7 +333,7 @@ app.post("/update-image", async (req, res) => {
   });
 
   res.send("Image updated!");
-})
+})*/
 
 
 //IMPORTANTE

@@ -50,11 +50,10 @@ async function confirmarEliminar(e){
 
         const confirmar = confirm('Quieres eliminar este producto?❌');
         if(confirmar){
-            const imgCon = e.target.parentElement.parentElement
+            let imgCon = e.target.parentElement.parentElement.parentElement
             const texto = imgCon.querySelector(".imagen-delete").src;
-            console.log(texto);
             let imagenName = texto.split("/").pop().split("?")[0];
-            console.log(imagenName);
+            //console.log(imagenName);
             
             fetch("/delete-imagen", {
             method: "POST", 
