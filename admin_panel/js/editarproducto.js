@@ -42,11 +42,10 @@ function mostrarProducto(producto) {
 
 async function validarProducto(e) {
     e.preventDefault();
-    const imagenInput = document.querySelector('#imagen').files[0];
+    const imagenInput = document.querySelector('#imagen').files[0].name;
     const urlImagen = `https://firebasestorage.googleapis.com/v0/b/imagenes-capstyle.appspot.com/o/${imagenInput}?alt=media`;
     console.log(imagenName);
-    console.log(imagenInput.name);
-    console.log(imagenInput.type);
+    console.log(imagenInput);
     const producto = {
         nombre: nombreInput.value,
         precio: precioInput.value,
