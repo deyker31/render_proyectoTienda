@@ -19,7 +19,7 @@ async function mostrarProductos() {
         <td class="px-2 sm:px-6 py-1 sm:py-4 whitespace-no-wrap border-b border-gray-200">
             <div class="flex flex-col items-center justify-center sm:gap-1">
             <p class= "text-xs sm:text-sm leading-5 font-medium text-gray-700 dark:text-gray-200 text-center">${nombre}</p>
-            <img class="imagen-delete w-8 sm:w-10 md:w-14 h-8 sm:h-10 md:h-14" src="${imagen}"></img>
+            <img class="imagen-delete w-8 sm:w-10 md:w-14 h-8 sm:h-10 md:h-14" src="${imagen}">
             </div>
         </td>
         <td class="px-2 sm:px-6 py-1 sm:py-4 whitespace-no-wrap border-b border-gray-200">
