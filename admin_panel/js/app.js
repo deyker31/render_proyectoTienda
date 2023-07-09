@@ -50,7 +50,6 @@ async function confirmarEliminar(e){
 
         const confirmar = confirm('Quieres eliminar este producto?❌');
         if(confirmar){
-            await eliminarProducto(productoId);
             const imgCon = e.target.parentElement.parentElement
             const texto = imgCon.querySelector(".imagen-delete").src;
             console.log(texto);
@@ -65,7 +64,7 @@ async function confirmarEliminar(e){
             body: JSON.stringify({ imagenName })
 
             })
-            
+            await eliminarProducto(productoId);
             alert('Producto eliminado exitosamente ✅');
             window.location.reload(); 
         }
