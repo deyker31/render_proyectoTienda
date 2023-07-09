@@ -316,16 +316,16 @@ app.put('/apiGorras/:id', (req, res) => {
 
 //actualizar imagen de firebase
 app.post("/update-image", async (req, res) => {
-  const { currentImageUrl, newImage } = req.body;
+  const { currentImage, newImage } = req.body;
   
-  const file = bucket.file(currentImageUrl);
+  const file = bucket.file(currentImage);
   
   const downloadUrl = file.publicUrl();  
   
   await fetch(downloadUrl, {
-    method: 'PUT', 
-    body: newImage
-  });  
+    method: 'PUT',
+    body: newImage  
+  });
   
   await file.updateMetadata({
     contentType: newImage.type  

@@ -31,7 +31,7 @@ function mostrarProducto(producto) {
     const {  nombre, precio, marca, tipo, color, imagen, _id } = producto;
 
     //imagenName = imagen.split("/").pop().split("?")[0];
-    imagenName = imagen;
+    imagenName = imagen.split("/").pop().split("?")[0];
     nombreInput.value = nombre;
     precioInput.value = precio;
     marcaInput.value = marca;
