@@ -53,6 +53,7 @@ async function confirmarEliminar(e){
             await eliminarProducto(productoId);
             const imgCon = e.target.parentElement.parentElement
             const texto = imgCon.querySelector(".imagen-delete").src;
+            console.log(texto);
             let imagenName = texto.split("/").pop().split("?")[0];
             console.log(imagenName);
             
