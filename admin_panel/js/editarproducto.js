@@ -31,7 +31,8 @@ function mostrarProducto(producto) {
     const {  nombre, precio, marca, tipo, color, imagen, _id } = producto;
 
     //imagenName = imagen.split("/").pop().split("?")[0];
-    imagenName = imagen.split("/").pop().split("?")[0];
+    //imagenName = imagen.split("/").pop().split("?")[0];
+    imagenName = imagen
     nombreInput.value = nombre;
     precioInput.value = precio;
     marcaInput.value = marca;
@@ -43,9 +44,10 @@ function mostrarProducto(producto) {
 
 async function validarProducto(e) {
     e.preventDefault();
+    const filename = imagenName.split("/").pop().split("?")[0];
     const imagenInput = document.querySelector('#imagen').files[0].name;
     const urlImagen = `https://firebasestorage.googleapis.com/v0/b/imagenes-capstyle.appspot.com/o/${imagenInput}?alt=media`;
-    console.log(imagenName);
+    console.log(filename);
     console.log(imagenInput);
     const producto = {
         nombre: nombreInput.value,
@@ -64,8 +66,8 @@ async function validarProducto(e) {
     fetch("/update-image", {
         method: "POST",  
         body: JSON.stringify({ 
-          currentImage: imagenName, 
-          newImage: imagenInput  
+          filename, 
+          imagenInput  
         })
       })
     //await editarProducto(producto.id, producto);
