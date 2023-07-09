@@ -7,6 +7,7 @@ const marcaInput = document.querySelector('#marca');
 const tipoInput = document.querySelector('#tipo');
 const idInput = document.querySelector('#id');
 const imagenInput = document.querySelector('#imagen');
+let imagenName
 const colorInput = document.querySelector('#color');
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -29,7 +30,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 function mostrarProducto(producto) {
     
     const {  nombre, precio, marca, tipo, color, imagen, _id } = producto;
-    
+
+    imagenName = imagen.split("/").pop().split("?")[0];
+    console.log(imagenName);
     nombreInput.value = nombre;
     precioInput.value = precio;
     marcaInput.value = marca;
