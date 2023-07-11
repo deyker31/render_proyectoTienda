@@ -272,31 +272,6 @@ app.put('/apiGorras/:id', (req, res) => {
     });
 });
 
-//actualizar imagen de firebase
-
-app.post('/updateImage', (req, res) => {
-  const oldImage = req.body.oldImage;
-  const newImage = req.body.newImage;
-  // Delete the old image
-  bucket.file(oldImage).delete().then(() => {
-    console.log(`Old image ${oldImage} has been deleted.`);
-  }).catch((error) => {
-    console.log('Error deleting old image:', error);
-  });
-
-  // Upload the new image
-  bucket.upload(newFileName, {
-    destination: oldImage,
-    public: true,
-    metadata: { contentType: 'image/jpeg' }
-  }).then(() => {
-    console.log(`New image ${newImage} has been uploaded.`);
-  }).catch((error) => {
-    console.log('Error uploading new image:', error);
-});
-  // Haz algo con los valores de oldImage y newImage, por ejemplo, guárdalos en la base de datos
-});
-
 
 
 

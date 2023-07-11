@@ -1,6 +1,7 @@
 //import { mostrarAlerta } from './alerta.js';
 import { obtenerProducto, editarProducto } from './api.js';
 
+const formulario = document.querySelector('#formulario');
 const nombreInput = document.querySelector('#nombre');
 const precioInput = document.querySelector('#precio');
 const marcaInput = document.querySelector('#marca');
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     //ahora vamos a registrar en el formulario
 
-    const formulario = document.querySelector('#formulario');
+    
     formulario.addEventListener('submit', validarProducto);
 })
 
@@ -62,21 +63,31 @@ async function validarProducto(e) {
         return;
     }
     
-    fetch('/updateImage', {
-    method: 'POST',
-    headers: {
-            'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-            oldImage: `${imagenName}`,
-            newImage: `${imagenInput}`
+    //Primero eliminar la imagen de firebase
+    fetch("/delete-imagen", {
+        method: "POST", 
+        headers: {
+            "Content-Type": "application/json"  
+        },
+        body: JSON.stringify({ imagenName })
+
+        })
+
+     //Luego subir la nueva imagen
+    const formData = new FormData(formulario); // crear objeto FormData
+
+    fetch('/admin_productos', {
+        method: 'POST',
+        body: formData
     })
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch((error) => {
-    console.error('Error:', error);
-});
+    .then(response  => response.json())
+        .then((data)  => {
+           console.log(data);
+        })
+        .catch(error => {
+            console.error(error);
+            // manejar el error
+        });   
     //await editarProducto(producto.id, producto);
     alert('Producto editado exitosamente ✅')
     //window.location.href = '/admin_productos';
