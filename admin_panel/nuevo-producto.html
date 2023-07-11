@@ -29,11 +29,12 @@
             <h2 class="text-3xl font-bold text-black dark:text-white text-center pb-5">Nuevo Producto</h2>
 
             <div class="flex flex-col mt-10 items-center mb-5">
+                <div id="alerta-error" class="absolute">
+
+                </div>
                 <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 w-full ">
                     <div class=" shadow overflow-hidden sm:rounded-lg border-b border-gray-200 ">
-                        <div id="alerta-error" class="absolute ml-32">
-
-                        </div>
+                        
                         <form id="formulario" class="bg-white p-3 dark:bg-gray-700" method="post" enctype="multipart/form-data">
                             <div class="mb-4">
                                 <label class="block text-orange-500 dark:text-orange-400 text-sm font-bold mb-2" for="nombre">Nombre</label>
@@ -65,9 +66,21 @@
                             <div class="mb-4">
                                 <label class="block text-orange-500 dark:text-orange-400 text-sm font-bold mb-2"
                                     for="telefono">Color</label>
-                                <input
-                                    required class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="color" name="color" type="text" placeholder="Colores Aceptables: blanco-negro-rojo-celeste-marron-gris-verde-azul" />
+                                    <select id="color" name="color" class="border border-gray-300 dark:border-gray-600 bg-white dark:bg-white text-base font-normal rounded-lg block w-full p-2.5 dark:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option selected value="">Por defecto</option>
+                                        <option value="negro">Negro</option>
+                                        <option value="marron">Marrón</option>
+                                        <option value="blanco">Blanco</option>
+                                        <option value="gris">Gris</option>
+                                        <option value="naranja">Naranja</option>
+                                        <option value="amarillo">Amarillo</option>
+                                        <option value="verde">Verde</option>
+                                        <option value="rosado">Rosado</option>
+                                        <option value="azul">Azul</option>
+                                        <option value="morado">Morado</option>
+                                        <option value="rojo">Rojo</option>
+                                        <option value="celeste">Celeste</option>
+                                      </select>
                             </div>
                             <div class="mb-4">
                                 <label class="block text-orange-500 dark:text-orange-400 text-sm font-bold mb-2" for="imagen">Imagen</label>
