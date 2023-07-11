@@ -176,49 +176,7 @@ app.use('/admin_productos/nuevoproducto', express.static(path.resolve('admin_pan
 app.use('/pago/alerta',express.static(path.resolve('src', 'pagoCancelado')));// conexion de pagoalerta
 app.use('/alerta',express.static(path.resolve('views', 'pagoExitoso')));// conexion de pagoalerta
 
-/*
-//usando fs para llear datos de bd
-const fs = require('fs');
 
-async function leerBaseDeDatos() {
-  return new Promise((resolve, reject) => {
-    fs.readFile('https://capstyle.onrender.com/apiServer/registros', 'utf8', (error, data) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(data);
-      }
-    });
-  });
-}
-
-//enviando en esta ruta la id
-app.put('/registros/:id', async function (req, res) {
-    var id = req.params.id;
-    var precio = req.body.precio;
-  
-    try {
-      // Leer la base de datos
-      var baseDeDatosJSON = await leerBaseDeDatos();
-      var baseDeDatos = JSON.parse(baseDeDatosJSON);
-  
-      // Actualizar el precio del objeto correspondiente
-      if (baseDeDatos.hasOwnProperty(id)) {
-        baseDeDatos[id].precio = precio;
-      } else {
-        console.error("No se encontró el objeto con el ID especificado.");
-      }
-  
-      // Guardar la base de datos
-      await guardarBaseDeDatos(JSON.stringify(baseDeDatos));
-  
-      console.log("Precio actualizado correctamente en la base de datos.");
-      res.send(baseDeDatos[id]); // Devolver el objeto actualizado
-    } catch (error) {
-      console.error("Error al actualizar precio en la base de datos:", error);
-      res.status(500).send("Error al actualizar precio en la base de datos.");
-    }
-  }); */
 
 ////
 ////NUEVOPRODUCTO
@@ -315,25 +273,32 @@ app.put('/apiGorras/:id', (req, res) => {
 });
 
 //actualizar imagen de firebase
-/*
-app.post("/update-image", async (req, res) => {
-  const { filename, imagenInput } = req.body;
-  
-  const file = bucket.file(filename);
-  
-  const downloadUrl = file.publicUrl();  
-  
-  await fetch(downloadUrl, {
-    method: 'PUT',
-    body: imagenInput  
-  });
-  
-  await file.updateMetadata({
-    contentType: imagenInput.type  
+
+app.post('/updateImage', (req, res) => {
+  const oldImage = req.body.oldImage;
+  const newImage = req.body.newImage;
+  // Delete the old image
+  bucket.file(oldImage).delete().then(() => {
+    console.log(`Old image ${oldImage} has been deleted.`);
+  }).catch((error) => {
+    console.log('Error deleting old image:', error);
   });
 
-  res.send("Image updated!");
-})*/
+  // Upload the new image
+  bucket.upload(newFileName, {
+    destination: oldImage,
+    public: true,
+    metadata: { contentType: 'image/jpeg' }
+  }).then(() => {
+    console.log(`New image ${newImage} has been uploaded.`);
+  }).catch((error) => {
+    console.log('Error uploading new image:', error);
+});
+  // Haz algo con los valores de oldImage y newImage, por ejemplo, guárdalos en la base de datos
+});
+
+
+
 
 
 //IMPORTANTE
